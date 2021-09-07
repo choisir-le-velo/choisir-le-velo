@@ -10,15 +10,12 @@ Le plan est composé de 4 axes principaux
 
 Si vous souhaitez proposer une modification il suffit de suivre ces étapes et de contacter l'association via cette adresse mail `contact@choisirlevelo.org` en y ajoutant l'adresse URL avec la pull request
 
-- Cloner le repository `git clone https://github.com/choisir-le-velo/choisir-le-velo.git` ou `gh repo clone choisir-le-velo/choisir-le-velo` en local
-- Créer une branche de travail `git checkout -b my-branch`
-- Récupérer le contenu du fichier geojson à modifier (cliquer sur RAW si vous avez la vue "carte") et le coller sur la partie de droite du site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041)
-  - Vous pouvez alors ajouter les lignes correspondant au troncon à ajouter, la partie de droite se mettra à jour en meme temps
-- Une fois les segments ajoutés sur le site, copier la partie de droite dans sa totalité
-- Coller le contenu dans le fichier d'origine en local
-- Préparer la demande de partage
-  - `git add --all`
-  - `git commit -m "message"`
-  - `git push` si vous avez un message d'erreur, recopier la commande proposée `git push --set-upstream origin my-branch` 
+- Avoir un compte [GitHub](https://github.com/)
+- Créer un fork du repository
+- Toujours en étant connecté à GitHub, se rendre sur le site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041) et cliquer sur `login`
+  - Autoriser geojson à accéder à vos données GitHub
+  - Vous pouvez alors ouvrir le fichier geojson à mettre à jour et ajouter les lignes correspondant au troncon à ajouter, la partie de droite se mettra à jour en meme temps
+  - Sauvegarder et entrer un message de confirmation
+- Depuis votre fork, créer une `pull request`
 - Envoyer un email à `contact@choisirlevelo.org`
 
