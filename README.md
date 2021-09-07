@@ -12,7 +12,7 @@ Si vous souhaitez proposer une modification il suffit de suivre ces étapes et d
 
 - Cloner le repository `git clone https://github.com/Dorian-s/choisir-le-velo.git` ou `gh repo clone Dorian-s/choisir-le-velo` en local
 - Créer une branche de travail `git checkout -b my-branch`
-- Récupérer le contenu du fichier geojson à modifier et le coller sur la partie de droite du site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041)
+- Récupérer le contenu du fichier geojson à modifier (cliquer sur RAW si vous avez la vue "carte") et le coller sur la partie de droite du site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041)
   - Vous pouvez alors ajouter les lignes correspondant au troncon à ajouter, la partie de droite se mettra à jour en meme temps
 - Une fois les segments ajoutés sur le site, copier la partie de droite dans sa totalité
 - Coller le contenu dans le fichier d'origine en local
