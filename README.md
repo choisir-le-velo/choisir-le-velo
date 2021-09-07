@@ -8,7 +8,7 @@ Le plan est composé de 4 axes principaux
 * Axe 3 – Mougins-le-Haut – Sophia
 * Axe 4 – Grasse – Mougins – Biot
 
-Si vous souhaitez proposer une modification il suffit de suivre ces étapes et de contacter l'association via cette adresse mail en y ajoutant l'adresse URL avec la pull request
+Si vous souhaitez proposer une modification il suffit de suivre ces étapes et de contacter l'association via cette adresse mail `contact@choisirlevelo.org` en y ajoutant l'adresse URL avec la pull request
 
 - Cloner le repository `git clone https://github.com/Dorian-s/choisir-le-velo.git` ou `gh repo clone Dorian-s/choisir-le-velo` en local
 - Créer une branche de travail `git checkout -b my-branch`
@@ -20,5 +20,5 @@ Si vous souhaitez proposer une modification il suffit de suivre ces étapes et d
   - `git add --all`
   - `git commit -m "message"`
   - `git push` si vous avez un message d'erreur, recopier la commande proposée `git push --set-upstream origin my-branch` 
-- Envoyer un email à `contact`
+- Envoyer un email à `contact@choisirlevelo.org`
 
