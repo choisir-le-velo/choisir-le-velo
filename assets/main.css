@@ -1,0 +1,92 @@
+body {
+  padding: 20px;
+}
+
+#mapFrame {
+  width: 100%;
+  height: 600px;
+}
+
+.legend {
+  list-style: none;
+  /* margin-top: 12px; */
+}
+
+.legend li {
+  /* float: left; */
+  margin-right: 10px;
+}
+
+.legend span.grey,
+.legend span.before-2019,
+.legend span.since-2019 {
+  border-radius: 25px;
+  float: left;
+  width: 40px;
+  height: 12px;
+  margin: 2px;
+}
+
+.legend .before-2019 {
+  background-color: #334CFF;
+}
+
+.legend .grey {
+  background-color: #797D7F;
+}
+
+.legend .since-2019 {
+  background-color: #2ECC71;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+[class^=progression] {
+  width: 100%;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: flex;
+}
+
+[class^=progression]>.done {
+  background-color: #2ECC71;
+}
+
+.progression-axe-1>.done.before-2019 {
+  background-color: #334CFF;
+}
+
+[class^=progression]>.value {
+  max-width: 1200px;
+  margin-top: 5px;
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  color: white;
+}
+
+[class^=progression]>.remain {
+  background-color: lightgray;
+}
+
+/* Les 4 axes prioritaires */
+.progress-bars {
+  max-width: 1200px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

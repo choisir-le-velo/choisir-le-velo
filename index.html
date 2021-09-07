@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+
+  <title>Choisir le vélo</title>
+
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+    rel='stylesheet' />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/tooltip.css">
+  <link rel="stylesheet" href="./assets/main.css">
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <script src="./assets/js/leaflet.ajax.min.js"></script>
+  <script src="./assets/js/turf.min.js"></script>
+  <script src="./assets/js/Leaflet.fullscreen.min.js"></script>
+  <script src="./assets/js/jquery-3.1.1.min.js"></script>
+  <script src="./assets/js/tooltip.min.js"></script>
+  <script src="./assets/js/jekyll-search-1.1.6.min.js"></script>
+</head>
+
+<body>
+  <h1 class="site-title">
+    Observatoire Plan Vélo Cap Azur - Association Choisir Le Vélo
+  </h1>
+
+  <p>
+    <em>Ces axes, sont avant tout pensés pour un usage utilitaire (déplacements du quotidien). Pour
+      convaincre les automobilistes qui le peuvent de se (re)mettre en selle, l’élément indispensable est la
+      sécurité. C’est pour cela que la réalisation de ces 4 axes prioritaires est primordiale.</em>
+  </p>
+  <div style="flex-basis:33.33%">
+    <h2>Les 4 axes prioritaires</h2>
+    <ul class="progress-bars">
+      <li>Axe 1 – L’Eurovélo 8
+        <span class="progression-axe-1">
+          <span class="value"></span>
+          <span class="done before-2019"></span>
+          <span class="done"></span>
+          <span class="remain"></span>
+        </span>
+      </li>
+      <li>Axe 2 – La route des Balcons d’Azur
+        <span class="progression-axe-2">
+          <span class="value"></span>
+          <span class="done"></span>
+          <span class="remain"></span>
+        </span>
+      </li>
+      <li>Axe 3 – Mougins-le-Haut – Sophia
+        <span class="progression-axe-3">
+          <span class="value"></span>
+          <span class="done"></span>
+          <span class="remain"></span>
+        </span>
+      </li>
+      <li>Axe 4 – Grasse – Mougins – Biot
+        <span class="progression-axe-4">
+          <span class="value"></span>
+          <span class="done"></span>
+          <span class="remain"></span>
+        </span>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <main class="page-content" aria-label="Content">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div id="mapFrame"></div>
+        <script type="text/javascript">
+          var lengthLanesTheory = 0;
+          var lengthLanesSatisfying = 0;
+          var lengthLanesUnsatisfying = 0;
+          var markers = [];
+          var zoomLevelToMarkerSize = {
+            11: 24,
+            12: 24,
+            13: 24,
+            14: 24,
+            15: 32,
+            16: 32,
+            17: 48,
+            18: 48,
+            19: 64
+          };
+          var colorsTheme = [
+            [0, "#ff0000"], // red
+            [0.33333, "#228b22"], // green
+            [0.10784, "#ffa500"] // orange
+          ];
+
+          function highlightFeature(e) {
+            var layer = e.target;
+
+            // Nothing to highlight for a point, so don't change its style
+            if (layer.feature.geometry.type != "Point") {
+              var newStyle = styleFeature(layer.feature);
+
+              if (layer.feature.geometry.type == "Polygon")
+                newStyle.fillOpacity += 0.2;
+              else
+                newStyle.weight += 2;
+
+              layer.setStyle(newStyle);
+            }
+
+            info.update(layer.feature);
+          }
+
+          function resetStyleFeature(e) {
+            var layer = e.target;
+            if (layer.feature.geometry.type != "Point") {
+              layer.setStyle(styleFeature(layer.feature));
+            }
+
+            info.update();
+          }
+
+
+          function updateInfo(feature) {
+            var content = '';
+            if (typeof feature != "undefined" && feature.geometry.type == "Polygon") {
+              var areaFeature = turf.area(feature) / 1000000.0;
+              areaFeature = Math.round(1000 * areaFeature) / 1000;
+
+              if (feature.properties && feature.properties.name)
+                content += "<b>" + feature.properties.name + "</b><br/>";
+              if (feature.properties && feature.properties.description)
+                content += feature.properties.description + "<br/>";
+
+              content += "Surface : " + areaFeature + "km²";
+            } else if (typeof feature != "undefined" && (feature.geometry.type == "LineString" || feature.geometry
+                .type == "MultiLineString")) {
+              var lengthFeature = Math.round(10 * turf.lineDistance(feature)) / 10;
+
+              if (feature.properties && feature.properties.name)
+                content += "<b>" + feature.properties.name + "</b><br/>";
+              if (feature.properties && feature.properties.description)
+                content += feature.properties.description + "<br/>";
+
+              content += "Longueur : " + lengthFeature + "km";
+            } else if (typeof feature != "undefined" && feature.geometry.type == "Point") {
+              if (feature.properties && feature.properties.name)
+                content += "<b>" + feature.properties.name + "</b><br/>";
+              if (feature.properties && feature.properties.description)
+                content += feature.properties.description + "<br/>";
+            } else
+              content = "Placez le curseur sur un segment pour plus d'informations";
+
+            this._div.innerHTML = '<h4>Informations</h4>' + content;
+          }
+
+          function bindFeatureEvents(feature, layer) {
+            layer.on({
+              mouseover: highlightFeature,
+              mouseout: resetStyleFeature,
+              click: function (e) {
+                info.update(e.target.feature);
+              }
+            });
+            const {
+              nom_axe,
+              distance,
+              dplus,
+              dminus,
+              debut,
+              fin,
+              date_obs1,
+              val_obs1,
+              dist_ko_obs1,
+              date_realisation,
+              commentaire,
+              img_url
+            } = feature.properties;
+            if (nom_axe) {
+
+              layer.bindTooltip(`
+                <div class="leaflet-tooltip-content">
+                  <h3>${nom_axe || '-'}</h3>
+                  Total parcours : ${distance}km - ↗${dplus || '-'}m ↘${dminus || '-'}m<br>
+                  Section allant de ${debut || '-'} à ${fin || '-'}.<br>
+                  <br>
+                  <h4>Avancement de l'axe</h4>
+                  Au ${date_obs1 || '-'}:
+                  Avancement : <strong>${val_obs1 || '-'}%</strong><br>
+                  Distance non aménagée : ${dist_ko_obs1 || '-'}km<br>
+                  <br>
+                  Date réalisation&nbsp;: ${date_realisation || '-'}<br>
+                  <img src="${img_url}" width="225"><br>
+                  Commentaire&nbsp;: ${commentaire || ''}
+                </div>
+`);
+            }
+          }
+          // Compute the total length of bike lanes
+          function bindFeatureEventsAndComputeTheoryLanesLength(feature, layer) {
+            if (typeof feature != "undefined" && (feature.geometry.type == "LineString" || feature.geometry.type ==
+                "MultiLineString")) {
+              lengthLanesTheory += turf.lineDistance(feature);
+              if (lengthLanesTheory) {
+                var value = `${lengthLanesTheory*100}`.split('.')[0];
+              }
+              document.getElementById('totalPlan').innerHTML = `${+value/100} Km`;
+            }
+            bindFeatureEvents(feature, layer);
+          }
+
+          // Function to convert a color in RGB color space to HSV color space
+          function rgbToHsl(r, g, b) {
+            r /= 255.0, g /= 255.0, b /= 255.0;
+            var max = Math.max(r, g, b),
+              min = Math.min(r, g, b);
+            var h, s, l = (max + min) / 2.0;
+
+            if (max == min) {
+              h = s = 0; // achromatic
+            } else {
+              var d = max - min;
+              s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+              switch (max) {
+                case r:
+                  h = (g - b) / d + (g < b ? 6 : 0);
+                  break;
+                case g:
+                  h = (b - r) / d + 2;
+                  break;
+                case b:
+                  h = (r - g) / d + 4;
+                  break;
+              }
+              h /= 6.0;
+            }
+
+            return [h, s, l];
+          }
+
+
+          // Function to get the style to apply to a feature
+          function styleFeature(feature) {
+            if (feature.geometry.type == "Polygon") {
+              return {
+                fillColor: "#3456d9",
+                fillOpacity: 0.4,
+                weight: 2,
+                opacity: 0.7,
+                color: 'white',
+                dashArray: '3'
+              };
+            } else {
+              return {
+                "color": feature.properties.stroke || '#797D7F',
+                "weight": Math.max(4, feature.properties["stroke-width"] || 4)
+              };
+            }
+          }
+
+          // Create the map with Mapbox tiles
+          var map = L.map('mapFrame', {
+            fullscreenControl: true,
+            maxBounds: [
+              [43.77360, 6.57467],
+              [43.43124, 7.45248]
+            ],
+            maxBoundsViscosity: 1.0,
+            minZoom: 11
+          });
+          L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+            // maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Choisir le vélo | 05/09/2021',
+          }).addTo(map);
+          map.fitBounds([
+            [43.77360, 6.57467],
+            [43.43124, 7.45248]
+          ]);
+          map.on('movestart', function (e) {
+            info.update();
+          });
+          map.on('zoomstart', function (e) {
+            info.update();
+          });
+
+          // Change the size of the icon for warning points on zoom
+          map.on('zoomend', function (e) {
+            var iconSize = zoomLevelToMarkerSize[map.getZoom()];
+            var icon = L.icon({
+              iconUrl: 'assets/images/warning' + iconSize + '.png',
+              iconSize: [iconSize, iconSize],
+              iconAnchor: [iconSize / 2, iconSize / 2]
+            });
+            for (var iMarker = 0; iMarker < markers.length; iMarker++) {
+              markers[iMarker].setIcon(icon);
+            }
+          });
+
+          // Add a custom control to display information
+          var info = L.control({
+            position: "bottomleft"
+          });
+          info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+          };
+          info.update = updateInfo;
+          info.addTo(map);
+
+          // Load the different layers and display the default one (planVelo) on the map
+          var overlayLayers = {};
+
+          var computeLanesLength = function (layer) {
+            try {
+              return turf.lineDistance(layer.feature);
+            } catch {
+              return 0;
+            }
+            return 0;
+          };
+
+          var addLayer = function (geoName, label, onEachFeature, back) {
+            var layer = new L.GeoJSON.AJAX(
+              "https://dorian-siffredi.ddns.net:3080/Dorian/choisir-le-velo/raw/branch/master/geojson/" +
+              geoName +
+              ".geojson", {
+                onEachFeature,
+                style: styleFeature
+              });
+            layer.addTo(map);
+            layer.on("data:loaded", function (res) {
+              if (back) {
+                layer.bringToBack();
+                map.on("overlayadd", function (event) {
+                  layer.bringToBack();
+                });
+              } else {
+                layer.bringToFront();
+              }
+              const name = layer.urls[0].split('/').pop().replace('.geojson', '');
+              layer.layerLength = Object.keys(layer._layers).reduce(function (sum, l) {
+                return sum += computeLanesLength(layer._layers[l]);
+              }, 0);
+              console.log(name, layer.layerLength);
+            });
+            overlayLayers[label] = layer;
+            return layer
+          };
+
+          addLayer("suivi_du_plan_v_lo_cap_azur", 'Plan Vélo Cap Azur', bindFeatureEventsAndComputeTheoryLanesLength,
+            true);
+          l1 = addLayer('axe1_eurovelo8_avant_2019', "Axe 1 avant 2019", bindFeatureEvents);
+          l11 = addLayer('axe1_eurovelo8_apres_2019', "Axe 1 depuis 2019", bindFeatureEvents);
+          l2 = addLayer('axe2_route_balcons_azur', "Axe 2 depuis 2019", bindFeatureEvents);
+          l3 = addLayer('axe3_mlh_sophia', "Axe 3 depuis 2019", bindFeatureEvents);
+          l4 = addLayer('axe4_grasse_mougins_biot', "Axe 4 depuis 2019", bindFeatureEvents);
+
+          var totalAxe1 = 25 + 27.86;
+          var totalAxe2 = 35.85;
+          var totalAxe3 = 4;
+          var totalAxe4 = 28.5;
+
+          setTimeout(() => {
+            // Calcul des totaux aménagés.
+            const total1 = Math.round(l1.layerLength * 100) / 100;
+            const total11 = Math.round(l11.layerLength * 100) / 100;
+            document.getElementById('axe1av2019').innerHTML = `${total1} Km`;
+            document.getElementById('axe1').innerHTML = `${total11} Km`;
+            document.getElementById('totalAxe1').innerHTML = `${total1 + total11} Km`;
+
+            document.getElementById('axe2').innerHTML = `${Math.round(l2.layerLength * 100)/100} Km`;
+            document.getElementById('axe3').innerHTML = `${Math.round(l3.layerLength * 100)/100} Km`;
+            document.getElementById('axe4').innerHTML = `${Math.round(l4.layerLength * 100)/100} Km`;
+
+            // Calcul des % d avancement.
+            const ratio1 = (total1 + total11) / totalAxe1;
+            document.querySelector('.progression-axe-1>.value').innerHTML = `${Math.round(ratio1*10000)/100}%`;
+            document.querySelectorAll('.progression-axe-1>.done')[0].style.flex = total1 / totalAxe1;
+            document.querySelectorAll('.progression-axe-1>.done')[1].style.flex = total11 / totalAxe1;
+            document.querySelector('.progression-axe-1>.remain').style.flex = 1 - ratio1;
+
+            const ratio2 = l2.layerLength / totalAxe2;
+            document.querySelector('.progression-axe-2>.value').innerHTML = `${Math.round(ratio2*10000)/100}%`;
+            document.querySelector('.progression-axe-2>.done').style.flex = ratio2;
+            document.querySelector('.progression-axe-2>.remain').style.flex = 1 - ratio2;
+
+            const ratio3 = l3.layerLength / totalAxe3;
+            document.querySelector('.progression-axe-3>.value').innerHTML = `${Math.round(ratio3*10000)/100}%`;
+            document.querySelector('.progression-axe-3>.done').style.flex = ratio3;
+            document.querySelector('.progression-axe-3>.remain').style.flex = 1 - ratio3;
+
+            const ratio4 = l4.layerLength / totalAxe4;
+            document.querySelector('.progression-axe-4>.value').innerHTML = `${Math.round(ratio4*10000)/100}%`;
+            document.querySelector('.progression-axe-4>.done').style.flex = ratio4;
+            document.querySelector('.progression-axe-4>.remain').style.flex = 1 - ratio4;
+
+          }, 500);
+
+          L.control.layers(null, overlayLayers, {
+            position: "topright",
+            collapsed: false
+          }).addTo(map);
+        </script>
+        <ul class="legend">
+          <li>
+            <span class="grey"></span>
+            <span>Plan Vélo (Total <span id="totalPlan"></span>)</span>
+          </li>
+          <li>
+            <strong>Axe 1 (Total aménagé <span id="totalAxe1"></span>)</strong>
+            <ul>
+              <li>
+                <span class="since-2019"></span>
+                Total aménagé après 2019 <span id="axe1"></span>
+              </li>
+              <li>
+                <span class="before-2019"></span>
+                Total aménagé avant 2019 <span id="axe1av2019"></span>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span class="since-2019"></span>
+            Axe 2 (Total aménagé <span id="axe2"></span>)
+          </li>
+          <li>
+            <span class="since-2019"></span>
+            Axe 3 (Total aménagé <span id="axe3"></span>)
+          </li>
+          <li>
+            <span class="since-2019"></span>
+            Axe 4 (Total aménagé <span id="axe4"></span>)
+          </li>
+        </ul>
+      </div>
+  </main>
+</body>
+
+</html>
