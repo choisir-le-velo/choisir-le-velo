@@ -10,7 +10,7 @@ Le plan est composé de 4 axes principaux
 
 Si vous souhaitez proposer une modification il suffit de suivre ces étapes et de contacter l'association via cette adresse mail en y ajoutant l'adresse URL avec la pull request
 
-- Cloner le repository `gh repo clone Dorian-s/choisir-le-velo` en local
+- Cloner le repository `git clone https://github.com/Dorian-s/choisir-le-velo.git` ou `gh repo clone Dorian-s/choisir-le-velo` en local
 - Créer une branche de travail `git checkout -b my-branch`
 - Récupérer le contenu du fichier geojson à modifier et le coller sur la partie de droite du site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041)
   - Vous pouvez alors ajouter les lignes correspondant au troncon à ajouter, la partie de droite se mettra à jour en meme temps
