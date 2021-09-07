@@ -15,7 +15,7 @@ Si vous souhaitez proposer une modification il suffit de suivre ces étapes et d
 - Toujours en étant connecté à GitHub, se rendre sur le site [geojson.io](https://geojson.io/#map=12/43.6168/7.0041) et cliquer sur `login`
   - Autoriser geojson à accéder à vos données GitHub
   - Vous pouvez alors ouvrir le fichier geojson à mettre à jour et ajouter les lignes correspondant au troncon à ajouter, la partie de droite se mettra à jour en meme temps
-  - Sauvegarder et entrer un message de confirmation
+  - Sauvegarder en cliquant sur `Save > GitHub`, parcourer le fichier geojson à modifier et entrer un message de confirmation
 - Depuis votre fork, créer une `pull request`
 - Envoyer un email à `contact@choisirlevelo.org`
 
