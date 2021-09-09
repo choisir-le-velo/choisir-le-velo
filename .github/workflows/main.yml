@@ -1,0 +1,34 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 🚀 Deploy website on push
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        # server: ftp.choisir-le-velo.org ? 
+        # username: choisir-le-velo ?
+        password: ${{ secrets.password }} # A renseigner
+        protocol: ftps # SFTP ?
+        # port: replace with your web hosts ftps port
+        dry-run: true
+        exclude: ./.git/**
+
+
