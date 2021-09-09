@@ -325,7 +325,7 @@
 
           var addLayer = function (geoName, label, onEachFeature, back) {
             var layer = new L.GeoJSON.AJAX(
-              "https://raw.githubusercontent.com/choisir-le-velo/choisir-le-velo/master/geojson/" +
+              "https://raw.githubusercontent.com/florent-morel/choisir-le-velo/master/geojson/" +
               geoName +
               ".geojson", {
                 onEachFeature,
@@ -353,11 +353,15 @@
 
           addLayer("suivi_du_plan_v_lo_cap_azur", 'Plan Vélo Cap Azur', bindFeatureEventsAndComputeTheoryLanesLength,
             true);
-          l1 = addLayer('axe1_eurovelo8_avant_2019', "Axe 1 avant 2019", bindFeatureEvents);
-          l11 = addLayer('axe1_eurovelo8_apres_2019', "Axe 1 depuis 2019", bindFeatureEvents);
-          l2 = addLayer('axe2_route_balcons_azur', "Axe 2 depuis 2019", bindFeatureEvents);
+          l1_before_2019 = addLayer('axe1_eurovelo8_avant_2019', "Axe 1 avant 2019", bindFeatureEvents);
+          l1_after_2019 = addLayer('axe1_eurovelo8_apres_2019', "Axe 1 depuis 2019", bindFeatureEvents);
+          
+          l2_before_2019 = addLayer('axe2_route_balcons_azur_avant_2019', "Axe 2 avant 2019", bindFeatureEvents);
+          l2_after_2019 = addLayer('axe2_route_balcons_azur_apres_2019', "Axe 2 depuis 2019", bindFeatureEvents);
+          
           l3_before_2019 = addLayer('axe3_mlh_sophia_avant_2019', "Axe 3 avant 2019", bindFeatureEvents);
           l3_after_2019 = addLayer('axe3_mlh_sophia_apres_2019', "Axe 3 depuis 2019", bindFeatureEvents);
+          
           l4 = addLayer('axe4_grasse_mougins_biot', "Axe 4 depuis 2019", bindFeatureEvents);
 
           // Longueur totales axes (source : CLV)
@@ -369,14 +373,14 @@
           setTimeout(() => {
             // Calcul des totaux aménagés.
             // Axe 1
-            const total1 = Math.round(l1.layerLength * 100) / 100;
-            const total11 = Math.round(l11.layerLength * 100) / 100;
-            document.getElementById('axe1av2019').innerHTML = `${total1} Km`;
-            document.getElementById('axe1').innerHTML = `${total11} Km`;
-            document.getElementById('totalAxe1').innerHTML = `${total1 + total11} Km`;
+            const total1_before_2019 = Math.round(l1_before_2019.layerLength * 100) / 100;
+            const total1_after_2019 = Math.round(l1_after_2019.layerLength * 100) / 100;
+            document.getElementById('axe1av2019').innerHTML = `${total1_before_2019} Km`;
+            document.getElementById('axe1').innerHTML = `${total1_after_2019} Km`;
+            document.getElementById('totalAxe1').innerHTML = `${total1_before_2019 + total1_after_2019} Km`;
 
             // Axe 2
-            document.getElementById('axe2').innerHTML = `${Math.round(l2.layerLength * 100)/100} Km`;
+            document.getElementById('axe2').innerHTML = `${Math.round(l2_before_2019.layerLength * 100)/100} Km`;
             
             // Axe 3         
             const total3_before_19 = Math.round(l3_before_2019.layerLength * 100) / 100;
@@ -391,10 +395,10 @@
 
             // Calcul des % d avancement.
             // Axe 1
-            const ratio1 = (total1 + total11) / totalAxe1;
+            const ratio1 = (total1_before_2019 + total1_after_2019) / totalAxe1;
             document.querySelector('.progression-axe-1>.value').innerHTML = `${Math.round(ratio1*10000)/100}%`;
-            document.querySelectorAll('.progression-axe-1>.done')[0].style.flex = total1 / totalAxe1;
-            document.querySelectorAll('.progression-axe-1>.done')[1].style.flex = total11 / totalAxe1;
+            document.querySelectorAll('.progression-axe-1>.done')[0].style.flex = total1_before_2019 / totalAxe1;
+            document.querySelectorAll('.progression-axe-1>.done')[1].style.flex = total1_after_2019 / totalAxe1;
             document.querySelector('.progression-axe-1>.remain').style.flex = 1 - ratio1;
 
             // Axe 2

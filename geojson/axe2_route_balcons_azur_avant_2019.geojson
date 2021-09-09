@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -151,7 +151,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -380,7 +380,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -477,7 +477,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -880,7 +880,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -1251,7 +1251,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -1430,7 +1430,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -1783,7 +1783,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1
       },
@@ -1936,7 +1936,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Chemin des Basses Ribes",
@@ -2404,7 +2404,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "GraphHopper Track",
