@@ -54,7 +54,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#2ECC71",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Arôma Grasse - Mouans centre"
@@ -76,7 +76,7 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#334CFF",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Avenue de Cannes - devant gymanse"
@@ -98,7 +98,7 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#334CFF",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Ancien chemin de Vallauris"
@@ -434,7 +434,7 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#334CFF",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "time": "2020-11-10T17:15:51Z"
@@ -1013,7 +1013,7 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#334CFF",
+        "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Avenue de Cannes - Sous passage à niveau"
