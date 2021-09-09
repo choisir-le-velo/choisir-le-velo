@@ -47,6 +47,7 @@
       <li>Axe 2 – La route des Balcons d’Azur
         <span class="progression-axe-2">
           <span class="value"></span>
+          <span class="done before-2019"></span>
           <span class="done"></span>
           <span class="remain"></span>
         </span>
@@ -62,6 +63,7 @@
       <li>Axe 4 – Grasse – Mougins – Biot
         <span class="progression-axe-4">
           <span class="value"></span>
+          <span class="done before-2019"></span>
           <span class="done"></span>
           <span class="remain"></span>
         </span>
@@ -380,7 +382,11 @@
             document.getElementById('totalAxe1').innerHTML = `${total1_before_2019 + total1_after_2019} Km`;
 
             // Axe 2
-            document.getElementById('axe2').innerHTML = `${Math.round(l2_before_2019.layerLength * 100)/100} Km`;
+            const total2_before_2019 = Math.round(l2_before_2019.layerLength * 100) / 100;
+            const total2_after_2019 = Math.round(l2_after_2019.layerLength * 100) / 100;
+            document.getElementById('axe2av2019').innerHTML = `${total2_before_2019} Km`;
+            document.getElementById('axe2').innerHTML = `${total2_after_2019} Km`;
+            document.getElementById('totalAxe2').innerHTML = `${total2_before_2019 + total2_after_2019} Km`;
             
             // Axe 3         
             const total3_before_19 = Math.round(l3_before_2019.layerLength * 100) / 100;
@@ -402,9 +408,10 @@
             document.querySelector('.progression-axe-1>.remain').style.flex = 1 - ratio1;
 
             // Axe 2
-            const ratio2 = l2.layerLength / totalAxe2;
+            const ratio2 = (total2_before_2019 + total2_after_2019) / totalAxe2;
             document.querySelector('.progression-axe-2>.value').innerHTML = `${Math.round(ratio2*10000)/100}%`;
-            document.querySelector('.progression-axe-2>.done').style.flex = ratio2;
+            document.querySelectorAll('.progression-axe-2>.done')[0].style.flex = total2_before_2019 / totalAxe2;
+            document.querySelectorAll('.progression-axe-2>.done')[1].style.flex = total2_after_2019 / totalAxe2;
             document.querySelector('.progression-axe-2>.remain').style.flex = 1 - ratio2;
 
             // Axe 3
@@ -447,8 +454,17 @@
           </li>
 
           <li>
-            <span class="since-2019"></span>
-            Axe 2 (Total aménagé <span id="axe2"></span>)
+            <strong>Axe 2 (Total aménagé <span id="totalAxe2"></span>)</strong>
+            <ul>
+              <li>
+                <span class="since-2019"></span>
+                Total aménagé après 2019 <span id="axe2"></span>
+              </li>
+              <li>
+                <span class="before-2019"></span>
+                Total aménagé avant 2019 <span id="axe2av2019"></span>
+              </li>
+            </ul>
           </li>
 
           <li>
