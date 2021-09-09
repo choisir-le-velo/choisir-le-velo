@@ -6,7 +6,7 @@
       "properties": {
                 "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1,
+        "stroke-opacity": 1
       },
       "geometry": {
         "type": "MultiLineString",
@@ -437,7 +437,7 @@
                 "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "time": "2020-11-10T17:15:51Z",
+        "time": "2020-11-10T17:15:51Z"
       },
       "geometry": {
         "type": "LineString",
