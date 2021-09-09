@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
 
-  <title>Choisir le vélo</title>
+  <title>Observatoire Plan Vélo Cap Azur - Association Choisir Le Vélo</title>
 
   <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
     rel='stylesheet' />
@@ -27,14 +27,38 @@
   <h1 class="site-title">
     Observatoire Plan Vélo Cap Azur - Association Choisir Le Vélo
   </h1>
+  <div style="flex-basis:33.33%">
+    <h2>Le Plan Vélo Cap Azur</h2>
+    <ul class="progress-bars">
+      <li>Avancement du Plan Vélo Cap Azur au 09/09/2021</span>
+        <span class="progression-total">
+          <span class="value"></span>
+          <span class="done before-2019"></span>
+          <span class="done"></span>
+          <span class="remain"></span>
+        </span>
+      </li>
+        <ul class="legend">
+	  <li>
+		<span class="before-2019"></span>
+		Distance aménagée avant l'annonce du Plan Vélo (Septembre 2019)
+	  </li>
+	  <li>
+		<span class="since-2019"></span>
+		Distance aménagée après l'annonce du Plan Vélo (Septembre 2019)
+	  </li>
+    </ul>
+    </ul>
+  </div>
+  
+  <div style="flex-basis:33.33%">
+    <h2>Les 4 axes prioritaires</h2>
 
   <p>
     <em>Ces axes, sont avant tout pensés pour un usage utilitaire (déplacements du quotidien). Pour
       convaincre les automobilistes qui le peuvent de se (re)mettre en selle, l’élément indispensable est la
       sécurité. C’est pour cela que la réalisation de ces 4 axes prioritaires est primordiale.</em>
   </p>
-  <div style="flex-basis:33.33%">
-    <h2>Les 4 axes prioritaires</h2>
     <ul class="progress-bars">
       <li>Axe 1 – L’Eurovélo 8
         <span class="progression-axe-1">
@@ -209,7 +233,7 @@
               if (lengthLanesTheory) {
                 var value = `${lengthLanesTheory*100}`.split('.')[0];
               }
-              document.getElementById('totalPlan').innerHTML = `${+value/100} Km`;
+              // document.getElementById('totalPlan').innerHTML = `${+value/100} km`;
             }
             bindFeatureEvents(feature, layer);
           }
@@ -275,7 +299,7 @@
           });
           L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
             // maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Choisir le vélo | 05/09/2021',
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Choisir Le Lélo | 05/09/2021',
           }).addTo(map);
           map.fitBounds([
             [43.77360, 6.57467],
@@ -327,7 +351,7 @@
 
           var addLayer = function (geoName, label, onEachFeature, back) {
             var layer = new L.GeoJSON.AJAX(
-              "https://raw.githubusercontent.com/florent-morel/choisir-le-velo/master/geojson/" +
+              "https://raw.githubusercontent.com/choisir-le-velo/choisir-le-velo/master/geojson/" +
               geoName +
               ".geojson", {
                 onEachFeature,
@@ -372,33 +396,50 @@
           var totalAxe2 = 35.85;
           var totalAxe3 = 4;
           var totalAxe4 = 28.5;
+          var totalPlan = totalAxe1 + totalAxe2 + totalAxe3 + totalAxe4;
 
           setTimeout(() => {
             // Calcul des totaux aménagés.
             // Axe 1
             const total1_before_2019 = Math.round(l1_before_2019.layerLength * 100) / 100;
             const total1_after_2019 = Math.round(l1_after_2019.layerLength * 100) / 100;
-            document.getElementById('axe1av2019').innerHTML = `${total1_before_2019} Km`;
-            document.getElementById('axe1').innerHTML = `${total1_after_2019} Km`;
-            document.getElementById('totalAxe1').innerHTML = `${total1_before_2019 + total1_after_2019} Km`;
+            document.getElementById('axe1av2019').innerHTML = `${total1_before_2019}`;
+            document.getElementById('axe1').innerHTML = `${total1_after_2019}`;
+            document.getElementById('totalAxe1').innerHTML = `${totalAxe1}`;
+            document.getElementById('totalAxe1Amenage').innerHTML = `${total1_before_2019 + total1_after_2019}`;
 
             // Axe 2
             const total2_before_2019 = Math.round(l2_before_2019.layerLength * 100) / 100;
             const total2_after_2019 = Math.round(l2_after_2019.layerLength * 100) / 100;
-            document.getElementById('axe2av2019').innerHTML = `${total2_before_2019} Km`;
-            document.getElementById('axe2').innerHTML = `${total2_after_2019} Km`;
-            document.getElementById('totalAxe2').innerHTML = `${total2_before_2019 + total2_after_2019} Km`;
+            document.getElementById('axe2av2019').innerHTML = `${total2_before_2019}`;
+            document.getElementById('axe2').innerHTML = `${total2_after_2019}`;
+            document.getElementById('totalAxe2').innerHTML = `${totalAxe2}`;
+            document.getElementById('totalAxe2Amenage').innerHTML = `${total2_before_2019 + total2_after_2019}`;
             
             // Axe 3         
-            const total3_before_19 = Math.round(l3_before_2019.layerLength * 100) / 100;
-            const total3_after_19 = Math.round(l3_after_2019.layerLength * 100) / 100;
-            document.getElementById('axe3av2019').innerHTML = `${total3_before_19} Km`;
-            document.getElementById('axe3').innerHTML = `${total3_after_19} Km`;
-            document.getElementById('totalAxe3').innerHTML = `${total3_before_19 + total3_after_19} Km`;
-            
-            
+            const total3_before_2019 = Math.round(l3_before_2019.layerLength * 100) / 100;
+            const total3_after_2019 = Math.round(l3_after_2019.layerLength * 100) / 100;
+            document.getElementById('axe3av2019').innerHTML = `${total3_before_2019}`;
+            document.getElementById('axe3').innerHTML = `${total3_after_2019}`;
+            document.getElementById('totalAxe3').innerHTML = `${totalAxe3}`;
+            document.getElementById('totalAxe3Amenage').innerHTML = `${total3_before_2019 + total3_after_2019}`;
+                       
             // Axe 4
-            document.getElementById('axe4').innerHTML = `${Math.round(l4.layerLength * 100)/100} Km`;
+            const total4_before_2019 = Math.round(l4_before_2019.layerLength * 100) / 100;
+            const total4_after_2019 = Math.round(l4_after_2019.layerLength * 100) / 100;
+            document.getElementById('axe4av2019').innerHTML = `${total4_before_2019}`;
+            document.getElementById('axe4').innerHTML = `${total4_after_2019}`;
+            document.getElementById('totalAxe4').innerHTML = `${totalAxe4}`;
+            document.getElementById('totalAxe4Amenage').innerHTML = `${total4_before_2019 + total4_after_2019}`;
+            
+            // Total
+            const total_plan_before_2019 = (total1_before_2019 + total2_before_2019 + total3_before_2019 + total4_before_2019);
+            const total_plan_after_2019 = (total1_after_2019 + total2_after_2019 + total3_after_2019 + total4_after_2019);
+            document.getElementById('totalplanav2019').innerHTML = `${total_plan_before_2019}`;
+            document.getElementById('totalplanap2019').innerHTML = `${total_plan_after_2019}`;
+            document.getElementById('totalPlan').innerHTML = `${Math.round(totalPlan*100)/100}`;
+            document.getElementById('totalPlanAmenage').innerHTML = `${total_plan_before_2019 + total_plan_after_2019}`;
+            
 
             // Calcul des % d avancement.
             // Axe 1
@@ -416,17 +457,25 @@
             document.querySelector('.progression-axe-2>.remain').style.flex = 1 - ratio2;
 
             // Axe 3
-            const ratio3 = (total3_before_19 + total3_after_19) / totalAxe3;
+            const ratio3 = (total3_before_2019 + total3_after_2019) / totalAxe3;
             document.querySelector('.progression-axe-3>.value').innerHTML = `${Math.round(ratio3*10000)/100}%`;
-            document.querySelectorAll('.progression-axe-3>.done')[0].style.flex = total3_before_19 / totalAxe3;
-            document.querySelectorAll('.progression-axe-3>.done')[1].style.flex = total3_after_19 / totalAxe3;
+            document.querySelectorAll('.progression-axe-3>.done')[0].style.flex = total3_before_2019 / totalAxe3;
+            document.querySelectorAll('.progression-axe-3>.done')[1].style.flex = total3_after_2019 / totalAxe3;
             document.querySelector('.progression-axe-3>.remain').style.flex = 1 - ratio3;
 
             // Axe 4
-            const ratio4 = l4.layerLength / totalAxe4;
+            const ratio4 = (total4_before_2019 + total4_after_2019) / totalAxe4;
             document.querySelector('.progression-axe-4>.value').innerHTML = `${Math.round(ratio4*10000)/100}%`;
-            document.querySelector('.progression-axe-4>.done').style.flex = ratio4;
+            document.querySelectorAll('.progression-axe-4>.done')[0].style.flex = total4_before_2019 / totalAxe4;
+            document.querySelectorAll('.progression-axe-4>.done')[1].style.flex = total4_after_2019 / totalAxe4;
             document.querySelector('.progression-axe-4>.remain').style.flex = 1 - ratio4;
+            
+            // Total
+            const ratio_total_plan = (total_plan_before_2019 + total_plan_after_2019) / totalPlan;
+            document.querySelector('.progression-total>.value').innerHTML = `${Math.round(ratio_total_plan*10000)/100}%`;
+            document.querySelectorAll('.progression-total>.done')[0].style.flex = total_plan_before_2019 / totalPlan;
+            document.querySelectorAll('.progression-total>.done')[1].style.flex = total_plan_after_2019 / totalPlan;
+            document.querySelector('.progression-total>.remain').style.flex = 1 - ratio_total_plan;
 
           }, 500);
 
@@ -438,65 +487,72 @@
         <ul class="legend">
           <li>
             <span class="grey"></span>
-            <span>Plan Vélo (Total <span id="totalPlan"></span>)</span>
-          </li>
-          <li>
-            <strong>Axe 1 (Total aménagé <span id="totalAxe1"></span>)</strong>
+            <span>Plan Vélo - Distance aménagée : <span id="totalPlanAmenage"></span>km sur un total de <span id="totalPlan"></span>km</span>
             <ul>
               <li>
-                <span class="since-2019"></span>
-                Total aménagé après 2019 <span id="axe1"></span>
+                <span class="before-2019"></span>
+                Distance aménagée avant 2019 : <span id="totalplanav2019"></span>km
               </li>
               <li>
+                <span class="since-2019"></span>
+                Distance aménagée après 2019 : <span id="totalplanap2019"></span>km
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Axe 1 - Distance aménagée : <span id="totalAxe1Amenage"></span>km sur un total de <span id="totalAxe1"></span>km</strong>
+            <ul>
+              <li>
                 <span class="before-2019"></span>
-                Total aménagé avant 2019 <span id="axe1av2019"></span>
+                Distance aménagée avant 2019 : <span id="axe1av2019"></span>km
+              </li>
+              <li>
+                <span class="since-2019"></span>
+                Distance aménagée après 2019 : <span id="axe1"></span>km
               </li>
             </ul>
           </li>
 
           <li>
-            <strong>Axe 2 (Total aménagé <span id="totalAxe2"></span>)</strong>
+            <strong>Axe 2 - Distance aménagée : <span id="totalAxe2Amenage"></span>km sur un total de <span id="totalAxe2"></span>km</strong>
             <ul>
               <li>
-                <span class="since-2019"></span>
-                Total aménagé après 2019 <span id="axe2"></span>
+                <span class="before-2019"></span>
+                Distance aménagée avant 2019 : <span id="axe2av2019"></span>km
               </li>
               <li>
-                <span class="before-2019"></span>
-                Total aménagé avant 2019 <span id="axe2av2019"></span>
+                <span class="since-2019"></span>
+                Distance aménagée après 2019 : <span id="axe2"></span>km
               </li>
             </ul>
           </li>
 
           <li>
-
-            <strong>Axe 3 (Total aménagé <span id="totalAxe3"></span>)</strong>
-
+            <strong>Axe 3 - Distance aménagée : <span id="totalAxe3Amenage"></span>km sur un total de <span id="totalAxe3"></span>km</strong>
             <ul>
-
               <li>
-
-                <span class="since-2019"></span>
-
-                Total aménagé après 2019 <span id="axe3"></span>
-
-              </li>
-
-              <li>
-
                 <span class="before-2019"></span>
-
-                Total aménagé avant 2019 <span id="axe3av2019"></span>
-
+                Distance aménagée avant 2019 : <span id="axe3av2019"></span>km
               </li>
-
+              <li>
+                <span class="since-2019"></span>
+                Distance aménagée après 2019 : <span id="axe3"></span>km
+              </li>
             </ul>
+          </li>
 
-          </li>
           <li>
-            <span class="since-2019"></span>
-            Axe 4 (Total aménagé <span id="axe4"></span>)
-          </li>
+            <strong>Axe 4 - Distance aménagée : <span id="totalAxe4Amenage"></span>km sur un total de <span id="totalAxe4"></span>km</strong>
+            <ul>
+              <li>
+                <span class="before-2019"></span>
+                Distance aménagée avant 2019 : <span id="axe4av2019"></span>km
+              </li>
+              <li>
+                <span class="since-2019"></span>
+                Distance aménagée après 2019 : <span id="axe4"></span>km
+              </li>
+            </ul>
         </ul>
       </div>
   </main>
