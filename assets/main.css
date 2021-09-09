@@ -65,7 +65,7 @@ body {
   background-color: #2ECC71;
 }
 
-.progression-axe-1>.done.before-2019 {
+[class^=progression]>.done.before-2019 {
   background-color: #334CFF;
 }
 
