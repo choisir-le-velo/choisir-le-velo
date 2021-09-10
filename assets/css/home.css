@@ -1,0 +1,117 @@
+body {
+  font-smoothing: subpixel-antialiased !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: auto !important;
+  text-shadow: 0 0 1em transparent, 1px 1px 1.2px rgb(0 0 0 / 0%);
+  /* text-rendering: optimizeLegibility; */
+  -webkit-overflow-scrolling: touch;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.025em;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.markdown-body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding-bottom: 40px;
+  max-width: 758px;
+  overflow: visible !important;
+}
+
+h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+img {
+  background-color: transparent;
+  max-width: 100%;
+  box-sizing: content-box;
+  vertical-align: middle;
+  border: 0;
+}
+
+nav,
+nav>ul.nav {
+  @media (max-width:1024px) {
+    display: none;
+  }
+}
+
+nav ul {
+  padding-inline-start: 10px;
+}
+
+nav>ul.nav {
+  top: 20px;
+  flex-direction: column;
+  max-width: 15vw;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.nav-pills li {
+  list-style: none;
+}
+
+.nav li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 4px 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #767676;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+
+.nav-pills li.active>a,
+.nav-pills li.active>a:focus,
+.nav-pills li.active>a:hover {
+  padding-left: 19px;
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 2px solid black;
+  border-radius: 0;
+}
