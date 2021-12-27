@@ -56,11 +56,11 @@
 
     <p>
       <em>Ces axes, sont avant tout pensés pour un usage utilitaire (déplacements du quotidien). Pour
-        convaincre les automobilistes qui le peuvent de se (re)mettre en selle, l’élément indispensable est la
-        sécurité. C’est pour cela que la réalisation de ces 4 axes prioritaires est primordiale.</em>
+        convaincre les automobilistes qui le peuvent de se (re)mettre en selle, l'élément indispensable est la
+        sécurité. C'est pour cela que la réalisation de ces 4 axes prioritaires est primordiale.</em>
     </p>
     <ul class="progress-bars">
-      <li>Axe 1 – L’Eurovélo 8
+      <li>Axe 1 - L'Eurovélo 8
         <span class="progression-axe-1">
           <span class="value"></span>
           <span class="done before-2019"></span>
@@ -68,7 +68,7 @@
           <span class="remain"></span>
         </span>
       </li>
-      <li>Axe 2 – La route des Balcons d’Azur
+      <li>Axe 2 - La route des Balcons d'Azur
         <span class="progression-axe-2">
           <span class="value"></span>
           <span class="done before-2019"></span>
@@ -76,7 +76,7 @@
           <span class="remain"></span>
         </span>
       </li>
-      <li>Axe 3 – Mougins-le-Haut – Sophia
+      <li>Axe 3 - Mougins-le-Haut - Sophia
         <span class="progression-axe-3">
           <span class="value"></span>
           <span class="done before-2019"></span>
@@ -84,7 +84,7 @@
           <span class="remain"></span>
         </span>
       </li>
-      <li>Axe 4 – Grasse – Mougins – Biot
+      <li>Axe 4 - Grasse - Mougins - Biot
         <span class="progression-axe-4">
           <span class="value"></span>
           <span class="done before-2019"></span>
@@ -102,9 +102,6 @@
         <div id="mapFrame"></div>
         <script type="text/javascript">
           var init = async function () {
-            var lastUpdateDate = "27/12/2021";
-            document.getElementById('dateMiseAJour').innerHTML = `${lastUpdateDate}`;
-            document.getElementById('dateMiseAJourMap').innerHTML = `${lastUpdateDate}`;
             var lengthLanesTheory = 0;
             var lengthLanesSatisfying = 0;
             var lengthLanesUnsatisfying = 0;
@@ -323,11 +320,13 @@
                     totalPlanBefore2019: 0,
                     totalPlanAfter2019: 0
                   });
-                document.getElementById('totalPlanBefore2019').innerHTML = `${totalPlanBefore2019}`;
-                document.getElementById('totalPlanAfter2019').innerHTML = `${totalPlanAfter2019}`;
+                document.getElementById('totalPlanBefore2019').innerHTML =
+                  `${Math.round(totalPlanBefore2019*100)/100}`;
+                document.getElementById('totalPlanAfter2019').innerHTML =
+                  `${Math.round(totalPlanAfter2019*100)/100}`;
                 document.getElementById('totalPlan').innerHTML = `${Math.round(totalPlan*100)/100}`;
                 document.getElementById('totalPlanAmenage').innerHTML =
-                  `${totalPlanBefore2019 + totalPlanAfter2019}`;
+                  `${Math.round((totalPlanBefore2019 + totalPlanAfter2019)*100)/100}`;
                 // Total
                 const ratio_total_plan = (totalPlanBefore2019 + totalPlanAfter2019) / totalPlan;
                 document.querySelector('.progression-total>.value').innerHTML =
@@ -467,6 +466,10 @@
               position: "topright",
               collapsed: false
             }).addTo(map);
+
+            var lastUpdateDate = "27/12/2021";
+            document.getElementById('dateMiseAJour').innerHTML = `${lastUpdateDate}`;
+            document.getElementById('dateMiseAJourMap').innerHTML = `${lastUpdateDate}`;
           }
 
           init();
