@@ -173,6 +173,8 @@
                 content += "<b>" + feature.properties.name + "</b><br/>";
               if (feature.properties && feature.properties.description)
                 content += feature.properties.description + "<br/>";
+              if (feature.properties && feature.properties.date_realisation)
+                content += "Date de réalisation : " + feature.properties.date_realisation + "<br/>";
 
               content += "Longueur : " + lengthFeature + "km";
             } else if (typeof feature != "undefined" && feature.geometry.type == "Point") {
