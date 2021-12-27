@@ -2058,44 +2058,6 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Antibes Centre"
-      },
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            7.125337,
-            43.577531
-          ],
-          [
-            7.12613,
-            43.577713
-          ],
-          [
-            7.126227,
-            43.577803
-          ],
-          [
-            7.127547,
-            43.580605
-          ],
-          [
-            7.128051,
-            43.582886
-          ],
-          [
-            7.127949,
-            43.58301
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#334CFF",
-        "stroke-width": 2,
-        "stroke-opacity": 1,
         "name": "Bréal - Embouchure Siagne"
       },
       "geometry": {
