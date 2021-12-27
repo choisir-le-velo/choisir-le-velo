@@ -16935,6 +16935,32 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Boulevard Louis Icard"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.907021,
+            43.643561,
+            223.61
+          ],
+          [
+            6.907502,
+            43.643517,
+            227.96
+          ],
+          [
+            6.908588,
+            43.643459,
+            229.68
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Bréal - Embouchure Siagne"
       },
       "geometry": {
