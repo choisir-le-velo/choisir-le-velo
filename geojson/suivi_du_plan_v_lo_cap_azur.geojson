@@ -15722,7 +15722,11 @@
     {
       "type": "Feature",
       "properties": {
-        "time": "2020-11-10T12:49:26Z"
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "time": "2020-11-10T12:49:26Z",
+        "name": "Route de l'Hôpital"
       },
       "geometry": {
         "type": "LineString",
