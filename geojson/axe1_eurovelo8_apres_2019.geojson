@@ -4,10 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Golfe Juan - Antibes",
+        "name": "Antibes RD6098",
         "stroke": "#2ECC71",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "date_realisation": 2021
       },
       "geometry": {
         "type": "MultiLineString",
@@ -193,7 +194,8 @@
         "stroke": "#2ECC71",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Mourre Rouge"
+        "name": "Mourre Rouge",
+        "date_realisation": 2021
       },
       "geometry": {
         "type": "LineString",
@@ -337,7 +339,8 @@
         "stroke": "#2ECC71",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Croisette"
+        "name": "Croisette",
+        "date_realisation": 2020
       },
       "geometry": {
         "type": "LineString",
@@ -641,7 +644,8 @@
         "stroke": "#2ECC71",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Parking Liégeard - Square Mistral"
+        "name": "Parking Liégeard - Square Mistral",
+        "date_realisation": 2021
       },
       "geometry": {
         "type": "LineString",
