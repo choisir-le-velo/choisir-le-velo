@@ -387,7 +387,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Route des Lucioles"
+        "name": "Route des Lucioles",
+        "date_realisation": "04/2011"
       },
       "geometry": {
         "type": "LineString",
