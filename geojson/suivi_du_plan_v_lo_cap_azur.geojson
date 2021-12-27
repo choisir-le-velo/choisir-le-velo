@@ -1315,7 +1315,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#797D7F",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Saint-Martin - RD98"
@@ -11407,7 +11407,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#797D7F",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Chemin de la Levade"
@@ -15725,7 +15725,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#555555",
+        "stroke": "#797D7F",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "time": "2020-11-10T12:49:26Z",
@@ -16205,7 +16205,8 @@
       "type": "Feature",
       "properties": {
         "time": "2020-11-10T13:15:56Z",
-        "name": ""
+        "name": "",
+        "stroke": ""
       },
       "geometry": {
         "type": "MultiLineString",
