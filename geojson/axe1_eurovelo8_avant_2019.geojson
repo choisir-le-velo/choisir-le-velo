@@ -1446,7 +1446,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Gazagnaire"
+        "name": "Gazagnaire",
+        "date_realisation": "07/2019"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1552,7 +1553,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Cannes-Golfe Juan"
+        "name": "Cannes-Golfe Juan",
+        "date_realisation": "11/2013"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1874,7 +1876,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Marina"
+        "name": "Marina",
+        "date_realisation": "08/2017?"
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2060,7 +2063,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Bréal - Embouchure Siagne"
+        "name": "Bréal - Embouchure Siagne",
+        "date_realisation": "05/2019?"
       },
       "geometry": {
         "type": "LineString",
