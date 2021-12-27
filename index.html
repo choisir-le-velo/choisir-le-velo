@@ -30,7 +30,7 @@
   <div style="flex-basis:33.33%">
     <h2>Le Plan Vélo Cap Azur</h2>
     <ul class="progress-bars">
-      <li>Avancement du Plan Vélo Cap Azur au 09/09/2021</span>
+      <li>Avancement du Plan Vélo Cap Azur au <span id="dateMiseAJour"></span></li>
         <span class="progression-total">
           <span class="value"></span>
           <span class="done before-2019"></span>
@@ -101,6 +101,9 @@
       <div class="panel-body">
         <div id="mapFrame"></div>
         <script type="text/javascript">
+	  var lastUpdateDate = "27/12/2021";
+          document.getElementById('dateMiseAJour').innerHTML = `${lastUpdateDate}`;
+          document.getElementById('dateMiseAJourMap').innerHTML = `${lastUpdateDate}`;
           var lengthLanesTheory = 0;
           var lengthLanesSatisfying = 0;
           var lengthLanesUnsatisfying = 0;
@@ -299,7 +302,7 @@
           });
           L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
             // maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Choisir Le Lévo | 27/12/2021',
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | Choisir Le Vélo | <span id="dateMiseAJourMap"></span>',
           }).addTo(map);
           map.fitBounds([
             [43.77360, 6.57467],
