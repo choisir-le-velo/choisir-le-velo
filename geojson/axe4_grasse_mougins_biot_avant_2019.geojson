@@ -4,56 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#334CFF",
-        "stroke-width": 2,
-        "stroke-opacity": 1
-      },
-      "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.948617,
-              43.650799,
-              150.96
-            ],
-            [
-              6.94905,
-              43.650413,
-              148.34
-            ],
-            [
-              6.94905,
-              43.650413,
-              148.34
-            ],
-            [
-              6.949614,
-              43.649926,
-              146.03
-            ],
-            [
-              6.950575,
-              43.649033,
-              143.15
-            ],
-            [
-              6.95117,
-              43.648401,
-              141.82
-            ],
-            [
-              6.952463,
-              43.647181,
-              135.82
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
@@ -437,7 +387,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "time": "2020-11-10T17:15:51Z"
+        "name": "Route des Lucioles",
+        "date_realisation": "04/2011"
       },
       "geometry": {
         "type": "LineString",
@@ -1016,7 +967,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Avenue de Cannes - Sous passage à niveau"
+        "name": "Avenue de Cannes - Sous passage à niveau",
+        "date_realisation": "12/2017"
       },
       "geometry": {
         "type": "LineString",

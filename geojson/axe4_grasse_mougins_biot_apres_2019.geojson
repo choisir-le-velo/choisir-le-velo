@@ -4,10 +4,65 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#2ECC71",
+        "stroke": "#2ECC71",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "RD98 - Mougins-Sophia"
+        "name": "RD304",
+        "date_realisation": "2020",
+        "retours_usagers": "https://wiki.choisirlevelo.org/doku.php?id=public:retours_usagers:rd304"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              6.948617,
+              43.650799,
+              150.96
+            ],
+            [
+              6.94905,
+              43.650413,
+              148.34
+            ],
+            [
+              6.94905,
+              43.650413,
+              148.34
+            ],
+            [
+              6.949614,
+              43.649926,
+              146.03
+            ],
+            [
+              6.950575,
+              43.649033,
+              143.15
+            ],
+            [
+              6.95117,
+              43.648401,
+              141.82
+            ],
+            [
+              6.952463,
+              43.647181,
+              135.82
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#2ECC71",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "name": "RD98 - Mougins-Sophia",
+        "date_realisation": "01/2021",
+        "retours_usagers": ""
       },
       "geometry": {
         "type": "LineString",
@@ -273,10 +328,11 @@
     {
       "type": "Feature",
       "properties": {
-                "stroke": "#2ECC71",
+        "stroke": "#2ECC71",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Route des Colles"
+        "name": "Route des Colles",
+        "date_realisation": "2020"
       },
       "geometry": {
         "type": "LineString",
@@ -320,6 +376,56 @@
             7.083438,
             43.616029,
             108.6
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#2ECC71",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "name": "Avenue Saint-Martin",
+        "date_realisation": "12/2021"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.979239,
+            43.6103,
+            110.79
+          ],
+          [
+            6.979489,
+            43.610197,
+            111.03
+          ],
+          [
+            6.97975,
+            43.610061,
+            110.98
+          ],
+          [
+            6.981977,
+            43.609096,
+            114.92
+          ],
+          [
+            6.982743,
+            43.608746,
+            115.16
+          ],
+          [
+            6.983959,
+            43.608219,
+            118.84
+          ],
+          [
+            6.984361,
+            43.608027,
+            120.13
           ]
         ]
       }
