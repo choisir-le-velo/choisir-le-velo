@@ -387,7 +387,7 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "time": "2020-11-10T17:15:51Z"
+        "name": "Route des Lucioles"
       },
       "geometry": {
         "type": "LineString",
@@ -966,7 +966,8 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "Avenue de Cannes - Sous passage à niveau"
+        "name": "Avenue de Cannes - Sous passage à niveau",
+        "date_realisation": "12/2017"
       },
       "geometry": {
         "type": "LineString",
