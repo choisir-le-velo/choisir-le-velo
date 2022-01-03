@@ -2096,6 +2096,31 @@
           ]
         ]
       }
+    },        
+    {    
+      "type": "Feature",
+      "properties": {
+        "name": "Verrerie",
+        "stroke": "#334CFF",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "date_realisation": "20219"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.979907,
+            43.547501,
+            8.31
+          ],
+          [
+            6.982151,
+            43.547802,
+            9.98
+          ]
+        ]
+      }
     }
   ]
 }
