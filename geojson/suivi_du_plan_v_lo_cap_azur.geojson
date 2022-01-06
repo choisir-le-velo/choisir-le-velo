@@ -4,6 +4,100 @@
     {
       "type": "Feature",
       "properties": {
+        "id_axe": "1",
+        "nom_axe": "L'Eurovélo 8",
+        "section": "1",
+        "debut": "Val de Tignet",
+        "fin": "Villeneuve-Loubet",
+        "distance": "53",
+        "amenage": "partiellement",
+        "comment": "",
+        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_04-1024x577.png",
+        "name": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.9658,
+          43.5516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_axe": "2",
+        "nom_axe": "La route des Balcons d'Azur",
+        "section": "0",
+        "debut": "Le Tignet",
+        "fin": "Tourrettes-sur-Loup",
+        "distance": "35,852",
+        "amenage": "partiellement",
+        "dplus": "797",
+        "dminus": "693",
+        "comment": "Axe majoritairement partagé : ancienne voie ferrée.",
+        "img_url": "https://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_05-1024x578.png",
+        "name": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.035198,
+          43.7042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_axe": "3",
+        "nom_axe": "Mougins-le-Haut – Sophia",
+        "section": "0",
+        "debut": "Mougins-le-Haut",
+        "fin": "Sophia",
+        "distance": "4,027",
+        "amenage": "partiellement",
+        "dplus": "63",
+        "dminus": "122",
+        "comment": "",
+        "img_url": "https://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_06-1024x577.png",
+        "name": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.03945,
+          43.605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_axe": "4",
+        "nom_axe": "Grasse - Mougins – Biot",
+        "section": "Axe 4",
+        "debut": "Grasse",
+        "fin": "Biot Gare",
+        "distance": "28,496",
+        "amenage": "partiellement",
+        "dplus": "352",
+        "dminus": "696",
+        "comment": "",
+        "img_url": "https://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_07-1024x578.png",
+        "name": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.958,
+          43.6299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Arôma Grasse - Mouans centre"
       },
       "geometry": {
@@ -3128,34 +3222,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id_axe": "4",
-        "nom_axe": "Grasse - Mougins – Biot",
-        "section": "Axe 4",
-        "debut": "Grasse",
-        "fin": "Biot Gare",
-        "distance": "28,496",
-        "amenage": "partiellement",
-        "dplus": "352",
-        "dminus": "696",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "18,162",
-        "val_obs1": "36,26",
-        "date_realisation": "",
-        "comment": "",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_07-1024x578.png",
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.958,
-          43.6299
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "time": "2020-11-10T17:15:51Z",
         "name": ""
       },
@@ -4231,34 +4297,6 @@
               156.9
             ]
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id_axe": "3",
-        "nom_axe": "Mougins-le-Haut – Sophia",
-        "section": "0",
-        "debut": "Mougins-le-Haut",
-        "fin": "Sophia",
-        "distance": "4,027",
-        "amenage": "partiellement",
-        "dplus": "63",
-        "dminus": "122",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "1,20",
-        "val_obs1": "70,20",
-        "date_realisation": "",
-        "comment": "",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_06-1024x577.png",
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.03945,
-          43.605
         ]
       }
     },
@@ -7969,37 +8007,6 @@
             7.055663,
             43.717442
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id_axe": "2",
-        "nom_axe": "La route des Balcons d'Azur",
-        "section": "0",
-        "debut": "Le Tignet",
-        "fin": "Tourrettes-sur-Loup",
-        "distance": "35,852",
-        "amenage": "partiellement",
-        "dplus": "797",
-        "dminus": "693",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "20,232",
-        "val_obs1": "43,57",
-        "date_realisation": "",
-        "comment": "Axe majoritairement partagé : ancienne voie ferrée.",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_05-1024x578.png",
-        "_umap_options": {
-          "labelDirection": "right"
-        },
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.035198,
-          43.7042
         ]
       }
     },
@@ -16878,68 +16885,6 @@
             7.127949,
             43.58301
           ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id_axe": "1",
-        "nom_axe": "L'Eurovélo 8 – Val de Siagne",
-        "section": "1",
-        "debut": "Val de Tignet",
-        "fin": "BoccaCabana",
-        "distance": "25,00",
-        "amenage": "partiellement",
-        "dplus": "357",
-        "dminus": "450",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "13,61",
-        "val_obs1": "45,56",
-        "date_realisation": "",
-        "comment": "",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_04-1024x577.png",
-        "_umap_options": {
-          "labelDirection": "left"
-        },
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.9403,
-          43.5762
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id_axe": "1",
-        "nom_axe": "L'Eurovélo 8 – Littoral",
-        "section": "2",
-        "debut": "Mandelieu",
-        "fin": "Villeneuve-Loubet",
-        "distance": "27,86",
-        "amenage": "partiellement",
-        "dplus": "228",
-        "dminus": "221",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "19,54",
-        "val_obs1": "29,86",
-        "date_realisation": "",
-        "comment": "",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_04-1024x577.png",
-        "_umap_options": {
-          "labelDirection": "right"
-        },
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.0714,
-          43.5645
         ]
       }
     },
