@@ -16885,61 +16885,21 @@
       "type": "Feature",
       "properties": {
         "id_axe": "1",
-        "nom_axe": "L'Eurovélo 8 – Val de Siagne",
+        "nom_axe": "L'Eurovélo 8",
         "section": "1",
         "debut": "Val de Tignet",
-        "fin": "BoccaCabana",
-        "distance": "25,00",
-        "amenage": "partiellement",
-        "dplus": "357",
-        "dminus": "450",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "13,61",
-        "val_obs1": "45,56",
-        "date_realisation": "",
-        "comment": "",
-        "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_04-1024x577.png",
-        "_umap_options": {
-          "labelDirection": "left"
-        },
-        "name": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.9403,
-          43.5762
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id_axe": "1",
-        "nom_axe": "L'Eurovélo 8 – Littoral",
-        "section": "2",
-        "debut": "Mandelieu",
         "fin": "Villeneuve-Loubet",
-        "distance": "27,86",
+        "distance": "53",
         "amenage": "partiellement",
-        "dplus": "228",
-        "dminus": "221",
-        "date_obs1": "10/11/20",
-        "dist_ko_obs1": "19,54",
-        "val_obs1": "29,86",
-        "date_realisation": "",
         "comment": "",
         "img_url": "http://www.choisirlevelo.org/wp-content/uploads/2017/05/PlanVelo_04-1024x577.png",
-        "_umap_options": {
-          "labelDirection": "right"
-        },
         "name": ""
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.0714,
-          43.5645
+          6.9658,
+          43.5516
         ]
       }
     },
