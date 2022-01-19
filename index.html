@@ -176,7 +176,7 @@
                 if (feature.properties && feature.properties.date_realisation)
                   content += "Date de réalisation : " + feature.properties.date_realisation + "<br/>";
 
-                content += "Longueur : " + lengthFeature + "km";       
+                content += "Longueur : " + lengthFeature + "km" +  "<br/>";       
                 content += "Commentaire : " + feature.properties.comment;
               } else if (typeof feature != "undefined" && feature.geometry.type == "Point") {
                 if (feature.properties && feature.properties.name)
