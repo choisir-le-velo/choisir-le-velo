@@ -888,8 +888,6 @@
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "",
-        "time": "",
-        "coordTimes": "",
         "comment": "Cette section semble ok, limitation à 30km/h, fort dénivelé sur le début cependant."
       },
       "geometry": {
@@ -1417,15 +1415,7 @@
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Chemin des Basses Ribes",
-        "time": "2020-11-17T16:16:10Z",
-        "coordTimes": [
-          "2020-11-17T16:16:10Z",
-          "2020-11-17T16:16:46Z",
-          "2020-11-17T16:19:47Z",
-          "2020-11-17T16:22:12Z",
-          "2020-11-17T16:22:59Z",
-          "2020-11-17T16:23:00Z"
-        ]
+        "comment": ""
       },
       "geometry": {
         "type": "LineString",
@@ -1885,11 +1875,7 @@
         "stroke-width": 2,
         "stroke-opacity": 1,
         "name": "Boulevard Louis Icard",
-        "time": "2020-11-17T16:17:17Z",
-        "coordTimes": [
-          "2020-11-17T16:17:17Z",
-          "2020-11-17T16:18:25Z"
-        ]
+        "comment": ""
       },
       "geometry": {
         "type": "LineString",
@@ -1933,8 +1919,7 @@
         "name": "Voie verte",
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1,
-        "time": ""
+        "stroke-opacity": 1
       },
       "geometry": {
         "type": "LineString",
@@ -2059,7 +2044,6 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "time": "",
         "comment": "Cette section semble ok, limitation à 30km/h."
       },
       "geometry": {
