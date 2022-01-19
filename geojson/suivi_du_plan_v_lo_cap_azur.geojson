@@ -1411,8 +1411,9 @@
       "properties": {
         "stroke": "#797D7F",
         "stroke-width": 2,
-        "stroke-opacity": 1,
-        "name": "Saint-Martin - RD98"
+        "stroke-opacity": 0.3,
+        "name": "Saint-Martin - RD98",
+        "time": ""
       },
       "geometry": {
         "type": "LineString",
@@ -3291,6 +3292,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": "RD98"
       },
       "geometry": {
@@ -7028,7 +7032,9 @@
         "stroke": "#797D7F",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "name": ""
+        "name": "",
+        "comment": "Panneau de limitation à 30km/h, quasi invisible à l'entrée de ville, aucune modification de chaussée pour inciter à ralentir.",
+        "img_url": ""
       },
       "geometry": {
         "type": "LineString",
@@ -7570,7 +7576,8 @@
         "stroke-width": 2,
         "stroke-opacity": 0.3,
         "name": "",
-        "comment": "Départementale non aménagée."
+        "comment": "Départementale non aménagée.",
+        "dminus": ""
       },
       "geometry": {
         "type": "LineString",
@@ -9468,11 +9475,12 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797d7f",
+        "stroke": "#797D7F",
         "stroke-width": 2,
-        "stroke-opacity": 1,
+        "stroke-opacity": 0.3,
         "name": "Route de Pie Lombard",
-        "comment": "Section à 50km/h. Secteur résidentiel, étroit. Devrait pouvoir être passé à 30km/h sans difficulté pour correspondre au cahier des charges."
+        "comment": "Section à 50km/h. Secteur résidentiel, étroit. Devrait pouvoir être passé à 30km/h sans difficulté pour correspondre au cahier des charges.",
+        "time": ""
       },
       "geometry": {
         "type": "LineString",
@@ -11245,7 +11253,7 @@
       "properties": {
         "stroke": "#797D7F",
         "stroke-width": 2,
-        "stroke-opacity": 1,
+        "stroke-opacity": 0.3,
         "name": "Chemin de la Levade"
       },
       "geometry": {
@@ -15563,7 +15571,7 @@
       "properties": {
         "stroke": "#797D7F",
         "stroke-width": 2,
-        "stroke-opacity": 1,
+        "stroke-opacity": 0.3,
         "time": "2020-11-10T12:49:26Z",
         "name": "Route de l'Hôpital"
       },
@@ -16772,7 +16780,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bréal - Embouchure Siagne"
+        "name": "Bréal - Embouchure Siagne",
+        "stroke": ""
       },
       "geometry": {
         "type": "LineString",
@@ -16809,9 +16818,10 @@
       "type": "Feature",
       "properties": {
         "stroke-width": 2,
-        "stroke-opacity": 1,
+        "stroke-opacity": 0.3,
         "name": "",
-        "comment": "Vitesse max inconnue. Si 30km/h ok, secteur résidentiel."
+        "comment": "Vitesse max inconnue. Si 30km/h ok, secteur résidentiel.",
+        "stroke": "#797D7F"
       },
       "geometry": {
         "type": "LineString",
