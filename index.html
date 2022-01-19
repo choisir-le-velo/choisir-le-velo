@@ -101,6 +101,9 @@
       <div class="panel-body">
         <div id="mapFrame"></div>
         <script type="text/javascript">
+          // Longueur totales axes (source : CLV)
+          // L'index qui contient le total correspond à `id_axe` de lafeature dans le geojson.
+          var totalAxes = [null, 25 + 27.86, 35.85, 4, 23.5];
           var init = async function () {
             var lengthLanesTheory = 0;
             var lengthLanesSatisfying = 0;
@@ -215,7 +218,6 @@
                 img_url
               } = feature.properties;
               if (nom_axe) {
-
                 layer.bindTooltip(`
                 <div class="leaflet-tooltip-content">
                   <h3>${nom_axe || '-'}</h3>
@@ -224,7 +226,7 @@
                   <br>
                   <h4>Avancement de l'axe</h4>
                   Au ${date_obs1 || '-'}:
-                  Avancement : <strong>${val_obs1 || '-'}%</strong><br>
+                  Avancement : <strong>${val_obs1 || '0'}%</strong><br>
                   Distance non aménagée : ${dist_ko_obs1 || '-'}km<br>
                   <br>
                   Date réalisation&nbsp;: ${date_realisation || '-'}<br>
@@ -243,6 +245,14 @@
                 if (lengthLanesTheory) {
                   var value = `${lengthLanesTheory*100}`.split('.')[0];
                 }
+              }
+              // Add custom properties to be displayed in the tooltip.
+              if (feature.properties.id_axe) {
+                const id_axe = feature.properties.id_axe;
+                const sum = axes[id_axe].totalAfter2019 + axes[id_axe].totalBefore2019;
+                // Displays with 2 digits.
+                feature.properties.val_obs1 = Math.round(sum / totalAxes[id_axe] * 10000) / 100;
+                feature.properties.dist_ko_obs1 = Math.round((totalAxes[id_axe] - sum) * 100) / 100;
               }
               bindFeatureEvents(feature, layer);
             }
@@ -279,7 +289,7 @@
               axes[axeNb][isAfter2019 ? 'totalAfter2019' : 'totalBefore2019'] = layerLength;
               document.getElementById(legendId).innerHTML = `${layerLength}`;
               document.getElementById(totalAxeId).innerHTML = `${totalAxe}`;
-              document.getElementById(totalAxeId+'Bars').innerHTML = `${totalAxe}`;
+              document.getElementById(totalAxeId + 'Bars').innerHTML = `${totalAxe}`;
 
               // Once the length before and after 2019 are set, compute the progress bars.
               const {
@@ -436,36 +446,32 @@
               overlayLayers[label] = layer;
             };
 
-            // Longueur totales axes (source : CLV)
-            var totalAxe1 = 25 + 27.86;
-            var totalAxe2 = 35.85;
-            var totalAxe3 = 4;
-            var totalAxe4 = 23.5;
-            var totalPlan = totalAxe1 + totalAxe2 + totalAxe3 + totalAxe4;
+
+            var totalPlan = totalAxes.reduce((sum, total) => total += sum, 0);
 
             addLayer("suivi_du_plan_v_lo_cap_azur", 'Plan Vélo Cap Azur',
               bindFeatureEventsAndComputeTheoryLanesLength,
               true);
             // Axes 1 Before and after 2019.
             l1_before_2019 = addLayer('axe1_eurovelo8_avant_2019', "Axe 1 avant 2019", bindFeatureEvents, false, 1,
-              totalAxe1, 'axe1Before2019', 'totalAxe1', false);
+              totalAxes[1], 'axe1Before2019', 'totalAxe1', false);
             l1_after_2019 = addLayer('axe1_eurovelo8_apres_2019', "Axe 1 depuis 2019", bindFeatureEvents, false, 1,
-              totalAxe1, 'axe1After2019', 'totalAxe1', true);
+              totalAxes[1], 'axe1After2019', 'totalAxe1', true);
             // Axes 2 Before and after 2019.
             l2_before_2019 = addLayer('axe2_route_balcons_azur_avant_2019', 'Axe 2 avant 2019', bindFeatureEvents,
-              false, 2, totalAxe2, 'axe2Before2019', 'totalAxe2', false);
+              false, 2, totalAxes[2], 'axe2Before2019', 'totalAxe2', false);
             l2_after_2019 = addLayer('axe2_route_balcons_azur_apres_2019', 'Axe 2 depuis 2019', bindFeatureEvents,
-              false, 2, totalAxe2, 'axe2After2019', 'totalAxe2', true);
+              false, 2, totalAxes[2], 'axe2After2019', 'totalAxe2', true);
             // Axes 3 Before and after 2019.
             l3_before_2019 = addLayer('axe3_mlh_sophia_avant_2019', 'Axe 3 avant 2019', bindFeatureEvents, false, 3,
-              totalAxe3, 'axe3Before2019', 'totalAxe3', false);
+              totalAxes[3], 'axe3Before2019', 'totalAxe3', false);
             l3_after_2019 = addLayer('axe3_mlh_sophia_apres_2019', 'Axe 3 depuis 2019', bindFeatureEvents, false, 3,
-              totalAxe3, 'axe3After2019', 'totalAxe3', true);
+              totalAxes[3], 'axe3After2019', 'totalAxe3', true);
             // Axes 4 Before and after 2019.
             l4_before_2019 = addLayer('axe4_grasse_mougins_biot_avant_2019', 'Axe 4 avant 2019', bindFeatureEvents,
-              false, 4, totalAxe4, 'axe4Before2019', 'totalAxe4', false);
+              false, 4, totalAxes[4], 'axe4Before2019', 'totalAxe4', false);
             l4_after_2019 = addLayer('axe4_grasse_mougins_biot_apres_2019', 'Axe 4 depuis 2019', bindFeatureEvents,
-              false, 4, totalAxe4, 'axe4After2019', 'totalAxe4', true);
+              false, 4, totalAxes[4], 'axe4After2019', 'totalAxe4', true);
 
             L.control.layers(null, overlayLayers, {
               position: "topright",
