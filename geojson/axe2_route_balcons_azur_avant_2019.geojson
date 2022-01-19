@@ -6,7 +6,8 @@
       "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": ""
       },
       "geometry": {
         "type": "MultiLineString",
@@ -153,7 +154,8 @@
       "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": ""
       },
       "geometry": {
         "type": "LineString",
@@ -382,7 +384,8 @@
       "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": ""
       },
       "geometry": {
         "type": "LineString",
@@ -479,7 +482,8 @@
       "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": ""
       },
       "geometry": {
         "type": "MultiLineString",
@@ -880,9 +884,13 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#334CFF",
+        "stroke": "#334cff",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": "",
+        "time": "",
+        "coordTimes": "",
+        "comment": "Cette section semble ok, limitation à 30km/h, fort dénivelé sur le début cependant."
       },
       "geometry": {
         "type": "MultiLineString",
@@ -1253,7 +1261,8 @@
       "properties": {
         "stroke": "#334CFF",
         "stroke-width": 2,
-        "stroke-opacity": 1
+        "stroke-opacity": 1,
+        "name": ""
       },
       "geometry": {
         "type": "LineString",
@@ -1875,7 +1884,7 @@
         "stroke": "#334CFF",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "name": "GraphHopper Track",
+        "name": "Boulevard Louis Icard",
         "time": "2020-11-17T16:17:17Z",
         "coordTimes": [
           "2020-11-17T16:17:17Z",
@@ -2039,6 +2048,77 @@
             7.027011,
             43.706125,
             323.54
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chemin du Bosquet",
+        "stroke": "#334CFF",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "time": "",
+        "comment": "Cette section semble ok, limitation à 30km/h."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.98485,
+            43.713293,
+            262.04
+          ],
+          [
+            6.984701,
+            43.712952,
+            261.11
+          ],
+          [
+            6.984668,
+            43.712722,
+            260.02
+          ],
+          [
+            6.984709,
+            43.712425,
+            258.62
+          ],
+          [
+            6.984749,
+            43.712318,
+            258.08
+          ],
+          [
+            6.98488,
+            43.712095,
+            257.9
+          ],
+          [
+            6.985092,
+            43.711858,
+            260.08
+          ],
+          [
+            6.98531,
+            43.711721,
+            260.35
+          ],
+          [
+            6.985579,
+            43.711586,
+            260.46
+          ],
+          [
+            6.985877,
+            43.711462,
+            260.41
+          ],
+          [
+            6.986913,
+            43.711139,
+            259.84
           ]
         ]
       }
