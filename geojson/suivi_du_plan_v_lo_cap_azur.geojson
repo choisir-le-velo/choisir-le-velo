@@ -16790,7 +16790,7 @@
         "stroke": "#797D7F",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "comment": "Limitation à 50km/h, quasi aucun aménagement pour abaisser la vitesse (2 rétrécissement avec ralentisseur sur 1km de longueur). Barrière infranchissable pour tandems, trikes, handbikes. Difficile pour vélos standard.",
+        "comment": "Limitation à 50km/h, quasi aucun aménagement pour abaisser la vitesse (2 rétrécissement avec ralentisseur sur 1km de longueur). Devrait pouvoir être passé à 30km/h sans difficulté pour correspondre au cahier des charges.",
         "img_url": ""
       },
       "geometry": {
