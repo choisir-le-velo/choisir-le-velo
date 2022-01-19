@@ -1921,7 +1921,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Voie verte"
+        "name": "Voie verte",
+        "stroke": "#334CFF",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "time": ""
       },
       "geometry": {
         "type": "LineString",
