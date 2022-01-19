@@ -7565,10 +7565,11 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797D7F",
+        "stroke": "#ef2929",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "name": ""
+        "name": "",
+        "comment": "Section à 50km/h. Secteur résidentiel, étroit, sinueux à fort dénivelé sur une partie. Devrait pouvoir être passé à 30km/h sans difficulté pour correspondre au cahier des charges."
       },
       "geometry": {
         "type": "LineString",
@@ -7911,10 +7912,11 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797D7F",
+        "stroke": "#797d7f",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "name": ""
+        "name": "",
+        "comment": "Départementale non aménagée."
       },
       "geometry": {
         "type": "LineString",
@@ -9445,7 +9447,7 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797D7F",
+        "stroke": "#797d7f",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
         "name": ""
