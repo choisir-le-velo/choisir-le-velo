@@ -98,6 +98,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": "Arôma Grasse - Mouans centre"
       },
       "geometry": {
@@ -601,7 +604,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Biot - Mer"
+        "name": "Biot - Mer",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -1012,6 +1017,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": "Grasse - Robertet"
       },
       "geometry": {
@@ -1353,6 +1361,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": "Mouans - PN5"
       },
       "geometry": {
@@ -2273,6 +2284,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": ""
       },
       "geometry": {
@@ -2292,7 +2306,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -2638,8 +2654,8 @@
         "dplus": "",
         "dminus": "",
         "stroke": "",
-        "stroke-width": "",
-        "stroke-opacity": ""
+        "stroke-width": 2,
+        "stroke-opacity": 0.3
       },
       "geometry": {
         "type": "LineString",
@@ -3215,6 +3231,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": ""
       },
       "geometry": {
@@ -3234,6 +3253,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": ""
       },
       "geometry": {
@@ -3282,7 +3304,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Arôma Grasse - Mouans centre"
+        "name": "Arôma Grasse - Mouans centre",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -3570,7 +3594,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Route des Colles"
+        "name": "Route des Colles",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -3621,7 +3647,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "RD135"
+        "name": "RD135",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -3838,7 +3866,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "RD135"
+        "name": "RD135",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -3873,7 +3903,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -4036,7 +4068,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -5680,726 +5714,6 @@
         "name": ""
       },
       "geometry": {
-        "type": "MultiLineString",
-        "coordinates": [
-          [
-            [
-              6.92856,
-              43.658265
-            ],
-            [
-              6.928619,
-              43.6583
-            ],
-            [
-              6.928659,
-              43.658356
-            ],
-            [
-              6.928694,
-              43.658436
-            ],
-            [
-              6.928709,
-              43.658473
-            ],
-            [
-              6.928903,
-              43.658828
-            ],
-            [
-              6.929022,
-              43.658993
-            ],
-            [
-              6.929104,
-              43.659088
-            ],
-            [
-              6.929184,
-              43.659162
-            ],
-            [
-              6.930196,
-              43.660156
-            ],
-            [
-              6.930244,
-              43.660203
-            ],
-            [
-              6.930363,
-              43.66032
-            ],
-            [
-              6.930416,
-              43.660367
-            ],
-            [
-              6.9305,
-              43.66044
-            ],
-            [
-              6.930772,
-              43.660676
-            ],
-            [
-              6.930912,
-              43.660789
-            ],
-            [
-              6.931045,
-              43.660884
-            ],
-            [
-              6.931289,
-              43.66102
-            ],
-            [
-              6.931476,
-              43.661114
-            ],
-            [
-              6.932065,
-              43.661352
-            ],
-            [
-              6.932152,
-              43.661387
-            ],
-            [
-              6.933066,
-              43.661724
-            ],
-            [
-              6.933787,
-              43.661994
-            ],
-            [
-              6.934155,
-              43.662155
-            ],
-            [
-              6.934245,
-              43.662187
-            ],
-            [
-              6.934602,
-              43.662291
-            ],
-            [
-              6.934739,
-              43.662315
-            ],
-            [
-              6.934981,
-              43.662346
-            ],
-            [
-              6.935331,
-              43.662384
-            ],
-            [
-              6.93574,
-              43.66243
-            ],
-            [
-              6.935923,
-              43.662461
-            ],
-            [
-              6.936122,
-              43.66251
-            ],
-            [
-              6.936308,
-              43.662569
-            ],
-            [
-              6.936461,
-              43.662638
-            ],
-            [
-              6.936636,
-              43.662738
-            ],
-            [
-              6.936772,
-              43.662821
-            ],
-            [
-              6.936945,
-              43.662967
-            ],
-            [
-              6.937061,
-              43.663089
-            ],
-            [
-              6.937163,
-              43.663211
-            ],
-            [
-              6.937254,
-              43.663422
-            ],
-            [
-              6.937306,
-              43.663639
-            ],
-            [
-              6.937313,
-              43.663669
-            ],
-            [
-              6.937417,
-              43.66415
-            ],
-            [
-              6.937452,
-              43.664265
-            ],
-            [
-              6.937523,
-              43.664344
-            ],
-            [
-              6.937564,
-              43.664432
-            ],
-            [
-              6.937629,
-              43.66453
-            ],
-            [
-              6.937708,
-              43.66463
-            ],
-            [
-              6.937817,
-              43.664745
-            ],
-            [
-              6.938005,
-              43.664918
-            ],
-            [
-              6.938161,
-              43.665025
-            ],
-            [
-              6.938221,
-              43.665067
-            ],
-            [
-              6.938454,
-              43.665218
-            ],
-            [
-              6.938832,
-              43.665464
-            ],
-            [
-              6.938869,
-              43.665487
-            ],
-            [
-              6.939189,
-              43.665695
-            ],
-            [
-              6.939683,
-              43.666019
-            ],
-            [
-              6.93978,
-              43.666082
-            ],
-            [
-              6.939998,
-              43.666223
-            ],
-            [
-              6.940249,
-              43.666387
-            ],
-            [
-              6.940314,
-              43.666423
-            ],
-            [
-              6.940456,
-              43.666501
-            ],
-            [
-              6.940625,
-              43.666574
-            ],
-            [
-              6.940637,
-              43.666579
-            ],
-            [
-              6.940798,
-              43.666643
-            ],
-            [
-              6.941083,
-              43.666749
-            ],
-            [
-              6.941429,
-              43.666877
-            ],
-            [
-              6.94165,
-              43.666972
-            ],
-            [
-              6.941682,
-              43.666991
-            ],
-            [
-              6.941819,
-              43.667069
-            ],
-            [
-              6.942093,
-              43.667262
-            ],
-            [
-              6.942239,
-              43.667391
-            ],
-            [
-              6.942354,
-              43.667512
-            ],
-            [
-              6.942362,
-              43.667523
-            ],
-            [
-              6.942486,
-              43.667687
-            ],
-            [
-              6.942569,
-              43.667832
-            ],
-            [
-              6.942588,
-              43.66788
-            ],
-            [
-              6.942644,
-              43.66802
-            ],
-            [
-              6.942709,
-              43.668226
-            ],
-            [
-              6.942807,
-              43.66852
-            ],
-            [
-              6.942884,
-              43.668794
-            ],
-            [
-              6.942932,
-              43.668919
-            ],
-            [
-              6.942996,
-              43.669038
-            ],
-            [
-              6.943117,
-              43.669203
-            ],
-            [
-              6.9433,
-              43.669415
-            ],
-            [
-              6.943465,
-              43.669611
-            ],
-            [
-              6.943591,
-              43.669764
-            ],
-            [
-              6.9437,
-              43.670061
-            ],
-            [
-              6.943837,
-              43.670446
-            ],
-            [
-              6.944027,
-              43.670883
-            ],
-            [
-              6.944261,
-              43.671177
-            ],
-            [
-              6.94474,
-              43.671626
-            ],
-            [
-              6.945023,
-              43.672005
-            ],
-            [
-              6.945292,
-              43.672655
-            ],
-            [
-              6.945497,
-              43.672875
-            ],
-            [
-              6.946125,
-              43.673337
-            ],
-            [
-              6.94616,
-              43.673362
-            ],
-            [
-              6.946337,
-              43.673489
-            ],
-            [
-              6.946461,
-              43.673577
-            ],
-            [
-              6.946993,
-              43.673946
-            ],
-            [
-              6.947646,
-              43.674398
-            ],
-            [
-              6.947931,
-              43.674612
-            ],
-            [
-              6.94814,
-              43.674816
-            ],
-            [
-              6.948297,
-              43.675119
-            ],
-            [
-              6.948368,
-              43.675318
-            ],
-            [
-              6.948456,
-              43.675561
-            ],
-            [
-              6.948571,
-              43.675883
-            ],
-            [
-              6.948887,
-              43.676255
-            ],
-            [
-              6.949186,
-              43.676531
-            ],
-            [
-              6.949632,
-              43.677331
-            ],
-            [
-              6.949802,
-              43.677556
-            ],
-            [
-              6.949969,
-              43.677706
-            ],
-            [
-              6.95017,
-              43.677818
-            ],
-            [
-              6.95043,
-              43.67789
-            ],
-            [
-              6.951945,
-              43.678249
-            ],
-            [
-              6.952252,
-              43.678329
-            ],
-            [
-              6.952521,
-              43.678446
-            ],
-            [
-              6.952781,
-              43.678615
-            ],
-            [
-              6.952995,
-              43.678799
-            ],
-            [
-              6.953201,
-              43.679018
-            ],
-            [
-              6.953318,
-              43.679142
-            ],
-            [
-              6.953456,
-              43.679289
-            ],
-            [
-              6.953729,
-              43.679561
-            ],
-            [
-              6.954036,
-              43.679799
-            ],
-            [
-              6.954367,
-              43.67995
-            ],
-            [
-              6.954712,
-              43.680046
-            ],
-            [
-              6.955088,
-              43.680083
-            ],
-            [
-              6.955451,
-              43.680059
-            ],
-            [
-              6.955813,
-              43.679993
-            ],
-            [
-              6.955963,
-              43.679967
-            ],
-            [
-              6.955998,
-              43.679961
-            ],
-            [
-              6.956986,
-              43.679783
-            ],
-            [
-              6.957199,
-              43.67977
-            ],
-            [
-              6.957413,
-              43.679789
-            ],
-            [
-              6.957912,
-              43.679877
-            ],
-            [
-              6.958017,
-              43.679912
-            ],
-            [
-              6.958229,
-              43.679987
-            ],
-            [
-              6.958427,
-              43.680081
-            ],
-            [
-              6.958739,
-              43.680268
-            ],
-            [
-              6.959102,
-              43.680495
-            ],
-            [
-              6.959255,
-              43.680569
-            ],
-            [
-              6.959647,
-              43.680728
-            ],
-            [
-              6.95985,
-              43.680821
-            ],
-            [
-              6.95991,
-              43.680849
-            ],
-            [
-              6.960198,
-              43.680997
-            ],
-            [
-              6.960303,
-              43.681046
-            ],
-            [
-              6.960523,
-              43.681136
-            ],
-            [
-              6.960754,
-              43.681208
-            ],
-            [
-              6.961021,
-              43.681271
-            ],
-            [
-              6.961233,
-              43.681313
-            ],
-            [
-              6.96158,
-              43.681366
-            ],
-            [
-              6.961781,
-              43.681389
-            ],
-            [
-              6.962004,
-              43.681402
-            ],
-            [
-              6.962202,
-              43.681408
-            ],
-            [
-              6.962438,
-              43.681407
-            ],
-            [
-              6.96263,
-              43.681401
-            ],
-            [
-              6.96287,
-              43.681378
-            ],
-            [
-              6.963075,
-              43.68135
-            ],
-            [
-              6.963354,
-              43.681301
-            ],
-            [
-              6.963925,
-              43.681173
-            ],
-            [
-              6.964321,
-              43.681071
-            ],
-            [
-              6.964381,
-              43.681056
-            ],
-            [
-              6.965006,
-              43.680864
-            ],
-            [
-              6.965288,
-              43.680721
-            ],
-            [
-              6.965556,
-              43.680516
-            ],
-            [
-              6.965666,
-              43.68047
-            ],
-            [
-              6.96585,
-              43.680422
-            ],
-            [
-              6.96601,
-              43.680381
-            ],
-            [
-              6.96624,
-              43.680343
-            ],
-            [
-              6.966375,
-              43.680332
-            ],
-            [
-              6.96682,
-              43.680232
-            ],
-            [
-              6.966997,
-              43.680204
-            ],
-            [
-              6.967083,
-              43.680191
-            ],
-            [
-              6.967166,
-              43.680186
-            ],
-            [
-              6.967226,
-              43.680197
-            ],
-            [
-              6.967329,
-              43.680227
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#797D7F",
-        "stroke-width": 2,
-        "stroke-opacity": 0.3,
-        "name": ""
-      },
-      "geometry": {
         "type": "LineString",
         "coordinates": [
           [
@@ -6540,180 +5854,11 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797D7F",
+        "stroke": "#797d7f",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "name": ""
-      },
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            6.967662,
-            43.68029
-          ],
-          [
-            6.967645,
-            43.680339
-          ],
-          [
-            6.967604,
-            43.680379
-          ],
-          [
-            6.967544,
-            43.680404
-          ],
-          [
-            6.967475,
-            43.680411
-          ],
-          [
-            6.967419,
-            43.680401
-          ],
-          [
-            6.96737,
-            43.680379
-          ],
-          [
-            6.967334,
-            43.680347
-          ],
-          [
-            6.967314,
-            43.680308
-          ],
-          [
-            6.967312,
-            43.680267
-          ],
-          [
-            6.967329,
-            43.680227
-          ],
-          [
-            6.967368,
-            43.68019
-          ],
-          [
-            6.967423,
-            43.680165
-          ],
-          [
-            6.967486,
-            43.680156
-          ],
-          [
-            6.967549,
-            43.680165
-          ],
-          [
-            6.967604,
-            43.680189
-          ],
-          [
-            6.967637,
-            43.680218
-          ],
-          [
-            6.967657,
-            43.680253
-          ],
-          [
-            6.967662,
-            43.68029
-          ],
-          [
-            6.967771,
-            43.680286
-          ],
-          [
-            6.967932,
-            43.680253
-          ],
-          [
-            6.9683,
-            43.680111
-          ],
-          [
-            6.96886,
-            43.679984
-          ],
-          [
-            6.969162,
-            43.679933
-          ],
-          [
-            6.969361,
-            43.679885
-          ],
-          [
-            6.969657,
-            43.679769
-          ],
-          [
-            6.969967,
-            43.679631
-          ],
-          [
-            6.970296,
-            43.679525
-          ],
-          [
-            6.970698,
-            43.67946
-          ],
-          [
-            6.971208,
-            43.679443
-          ],
-          [
-            6.971598,
-            43.679406
-          ],
-          [
-            6.971875,
-            43.679333
-          ],
-          [
-            6.972077,
-            43.679256
-          ],
-          [
-            6.972337,
-            43.679108
-          ],
-          [
-            6.972508,
-            43.679017
-          ],
-          [
-            6.972589,
-            43.678997
-          ],
-          [
-            6.972736,
-            43.678986
-          ],
-          [
-            6.972846,
-            43.679008
-          ],
-          [
-            6.973164,
-            43.679089
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "stroke": "#797D7F",
-        "stroke-width": 2,
-        "stroke-opacity": 0.3,
-        "name": ""
+        "name": "",
+        "comment": "Départementale non aménagée."
       },
       "geometry": {
         "type": "LineString",
@@ -6792,10 +5937,11 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "#797D7F",
+        "stroke": "#797d7f",
         "stroke-width": 2,
         "stroke-opacity": 0.3,
-        "name": ""
+        "name": "",
+        "comment": "Secteur urbain non aménagé."
       },
       "geometry": {
         "type": "LineString",
@@ -9669,7 +8815,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chemin des Basses Ribes"
+        "name": "Chemin des Basses Ribes",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -10125,7 +9273,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -10166,7 +9316,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -10439,6 +9591,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": ""
       },
       "geometry": {
@@ -10640,6 +9795,9 @@
     {
       "type": "Feature",
       "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
         "name": ""
       },
       "geometry": {
@@ -10716,7 +9874,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Autoroute A8"
+        "name": "Autoroute A8",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -10752,7 +9912,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "BoccaCabana - Parking Liégeard"
+        "name": "BoccaCabana - Parking Liégeard",
+        "id_axe": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -10873,7 +10036,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bréal - Embouchure Siagne"
+        "name": "Bréal - Embouchure Siagne",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -11240,7 +10405,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Giratoire Mossello - Planasteaux"
+        "name": "Giratoire Mossello - Planasteaux",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -11321,7 +10488,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Golfe Juan - Antibes"
+        "name": "Golfe Juan - Antibes",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -11969,7 +11138,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Golfe Juan - Antibes"
+        "name": "Golfe Juan - Antibes",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -12145,7 +11316,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mandelieu - BoccaCabana"
+        "name": "Mandelieu - BoccaCabana",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -12263,7 +11436,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Palm Beach"
+        "name": "Palm Beach",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -12339,7 +11514,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Piste DFCI Auribeau"
+        "name": "Piste DFCI Auribeau",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -13170,7 +12347,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Port de Cannes"
+        "name": "Port de Cannes",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -13281,7 +12460,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Val de Tignet - Vallée heureuse"
+        "name": "Val de Tignet - Vallée heureuse",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -13487,7 +12668,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Croisette"
+        "name": "Croisette",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -13788,7 +12971,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Golfe Juan - Antibes"
+        "name": "Golfe Juan - Antibes",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -14021,7 +13206,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mourre Rouge"
+        "name": "Mourre Rouge",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -14162,7 +13349,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Parking Liégeard - Square Mistral"
+        "name": "Parking Liégeard - Square Mistral",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -14198,7 +13387,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Planasteaux - Le Tignet"
+        "name": "Planasteaux - Le Tignet",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -14314,7 +13505,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Vallée heureuse - Giratoire Mossello"
+        "name": "Vallée heureuse - Giratoire Mossello",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -14535,7 +13728,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -14608,7 +13803,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -15091,7 +14288,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -15262,7 +14461,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -15679,7 +14880,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -15918,7 +15121,9 @@
       "type": "Feature",
       "properties": {
         "name": "",
-        "stroke": ""
+        "stroke": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -15955,7 +15160,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -16058,7 +15265,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -16306,7 +15515,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -16374,7 +15585,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "MultiLineString",
@@ -16557,7 +15770,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": ""
+        "name": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -16592,7 +15807,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Boulevard Louis Icard"
+        "name": "Boulevard Louis Icard",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -16618,7 +15835,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "DSC Pont Bouillide"
+        "name": "DSC Pont Bouillide",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -16645,7 +15864,9 @@
       "type": "Feature",
       "properties": {
         "name": "Bréal - Embouchure Siagne",
-        "stroke": ""
+        "stroke": "",
+        "stroke-opacity": 0.3,
+        "stroke-width": 2
       },
       "geometry": {
         "type": "LineString",
@@ -16885,6 +16106,616 @@
             6.986913,
             43.711139,
             259.84
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#797d7f",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
+        "name": "Avenue de Saint-Laurent",
+        "comment": "Secteur urbain non aménagé. Une portion à 30km/h sans élément pour ralentir. Le tunnel est à 50km/h."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.972905,
+            43.67903,
+            410.26
+          ],
+          [
+            6.972736,
+            43.678986,
+            410.52
+          ],
+          [
+            6.972589,
+            43.678997,
+            410.6
+          ],
+          [
+            6.972508,
+            43.679017,
+            410.71
+          ],
+          [
+            6.97209,
+            43.67926,
+            410.72
+          ],
+          [
+            6.97186,
+            43.679356,
+            410.84
+          ],
+          [
+            6.971445,
+            43.679434,
+            410.45
+          ],
+          [
+            6.970446,
+            43.679494,
+            409.05
+          ],
+          [
+            6.970131,
+            43.679571,
+            407.03
+          ],
+          [
+            6.969355,
+            43.679883,
+            391.97
+          ],
+          [
+            6.969105,
+            43.679947,
+            391.24
+          ],
+          [
+            6.968558,
+            43.680041,
+            388.26
+          ],
+          [
+            6.9683,
+            43.680111,
+            388.23
+          ],
+          [
+            6.967932,
+            43.680253,
+            388.15
+          ],
+          [
+            6.967771,
+            43.680286,
+            387.99
+          ],
+          [
+            6.967662,
+            43.68029,
+            386.61
+          ],
+          [
+            6.967645,
+            43.680339,
+            387.76
+          ],
+          [
+            6.967604,
+            43.680379,
+            387.81
+          ],
+          [
+            6.967544,
+            43.680404,
+            387.74
+          ],
+          [
+            6.967419,
+            43.680401,
+            386.08
+          ],
+          [
+            6.967334,
+            43.680347,
+            385.68
+          ],
+          [
+            6.967312,
+            43.680267,
+            385.65
+          ],
+          [
+            6.967329,
+            43.680227,
+            383.72
+          ],
+          [
+            6.967166,
+            43.680186,
+            382.5
+          ],
+          [
+            6.966935,
+            43.680214,
+            381.28
+          ],
+          [
+            6.966375,
+            43.680332,
+            379.34
+          ],
+          [
+            6.96624,
+            43.680343,
+            377.25
+          ],
+          [
+            6.96585,
+            43.680422,
+            375.49
+          ],
+          [
+            6.965666,
+            43.68047,
+            377.83
+          ],
+          [
+            6.965556,
+            43.680515,
+            377.46
+          ],
+          [
+            6.965288,
+            43.680721,
+            377.55
+          ],
+          [
+            6.965006,
+            43.680864,
+            377.96
+          ],
+          [
+            6.964321,
+            43.681071,
+            382.86
+          ],
+          [
+            6.963354,
+            43.681301,
+            389.45
+          ],
+          [
+            6.96287,
+            43.681378,
+            398.02
+          ],
+          [
+            6.962438,
+            43.681407,
+            396.89
+          ],
+          [
+            6.961781,
+            43.681389,
+            395.2
+          ],
+          [
+            6.961233,
+            43.681313,
+            393.77
+          ],
+          [
+            6.960754,
+            43.681208,
+            392.5
+          ],
+          [
+            6.960547,
+            43.681143,
+            392.18
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#797d7f",
+        "stroke-width": 2,
+        "stroke-opacity": 0.3,
+        "name": "Magagnosc - Grasse",
+        "comment": "30km/h à la sortie du tunnel puis quelques panneaux 30km/h sans rappel donc la vitesse max n’est pas claire. Passe ensuite à 50km/h. Aucun aménagement pour contenir la vitesse motorisée."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.960547,
+            43.681143,
+            392.18
+          ],
+          [
+            6.960303,
+            43.681046,
+            388.7
+          ],
+          [
+            6.95985,
+            43.680821,
+            384.13
+          ],
+          [
+            6.959102,
+            43.680495,
+            380.14
+          ],
+          [
+            6.958427,
+            43.680081,
+            379.64
+          ],
+          [
+            6.958229,
+            43.679987,
+            378.48
+          ],
+          [
+            6.957912,
+            43.679877,
+            374.36
+          ],
+          [
+            6.957413,
+            43.679789,
+            371.49
+          ],
+          [
+            6.957199,
+            43.679769,
+            371.08
+          ],
+          [
+            6.956986,
+            43.679783,
+            367.99
+          ],
+          [
+            6.955451,
+            43.680059,
+            362.54
+          ],
+          [
+            6.955088,
+            43.680083,
+            362.6
+          ],
+          [
+            6.954712,
+            43.680046,
+            363.25
+          ],
+          [
+            6.954366,
+            43.67995,
+            363.61
+          ],
+          [
+            6.954036,
+            43.679799,
+            363.42
+          ],
+          [
+            6.953729,
+            43.679561,
+            363.91
+          ],
+          [
+            6.952995,
+            43.678799,
+            358.44
+          ],
+          [
+            6.952781,
+            43.678615,
+            357.02
+          ],
+          [
+            6.952521,
+            43.678446,
+            356.79
+          ],
+          [
+            6.952252,
+            43.678329,
+            356.43
+          ],
+          [
+            6.950348,
+            43.677879,
+            351.11
+          ],
+          [
+            6.950217,
+            43.677832,
+            350.17
+          ],
+          [
+            6.949971,
+            43.677686,
+            351.2
+          ],
+          [
+            6.949683,
+            43.67746,
+            352.5
+          ],
+          [
+            6.949555,
+            43.677335,
+            353.14
+          ],
+          [
+            6.949403,
+            43.677042,
+            351.02
+          ],
+          [
+            6.949134,
+            43.676596,
+            350.54
+          ],
+          [
+            6.948887,
+            43.676255,
+            349.59
+          ],
+          [
+            6.9486,
+            43.675922,
+            348.9
+          ],
+          [
+            6.948297,
+            43.675119,
+            342.69
+          ],
+          [
+            6.948139,
+            43.674816,
+            341.78
+          ],
+          [
+            6.947931,
+            43.674612,
+            341.66
+          ],
+          [
+            6.94616,
+            43.673362,
+            338.98
+          ],
+          [
+            6.945497,
+            43.672875,
+            337.29
+          ],
+          [
+            6.945292,
+            43.672655,
+            336.53
+          ],
+          [
+            6.945023,
+            43.672005,
+            333.48
+          ],
+          [
+            6.94474,
+            43.671626,
+            332.41
+          ],
+          [
+            6.944261,
+            43.671177,
+            331.85
+          ],
+          [
+            6.944027,
+            43.670883,
+            331.51
+          ],
+          [
+            6.943837,
+            43.670446,
+            330.6
+          ],
+          [
+            6.94359,
+            43.669764,
+            329.64
+          ],
+          [
+            6.943117,
+            43.669203,
+            326.67
+          ],
+          [
+            6.942996,
+            43.669038,
+            323.42
+          ],
+          [
+            6.942925,
+            43.668902,
+            323.54
+          ],
+          [
+            6.942588,
+            43.66788,
+            316.32
+          ],
+          [
+            6.942486,
+            43.667687,
+            315.23
+          ],
+          [
+            6.942362,
+            43.667523,
+            313.87
+          ],
+          [
+            6.942093,
+            43.667262,
+            313.27
+          ],
+          [
+            6.941682,
+            43.666991,
+            312.99
+          ],
+          [
+            6.941429,
+            43.666877,
+            313.47
+          ],
+          [
+            6.940625,
+            43.666574,
+            314.08
+          ],
+          [
+            6.940314,
+            43.666423,
+            312.77
+          ],
+          [
+            6.938005,
+            43.664918,
+            309.25
+          ],
+          [
+            6.937835,
+            43.664828,
+            308.47
+          ],
+          [
+            6.937723,
+            43.664736,
+            308.55
+          ],
+          [
+            6.937589,
+            43.664591,
+            308.62
+          ],
+          [
+            6.937482,
+            43.664417,
+            308.53
+          ],
+          [
+            6.937254,
+            43.663422,
+            297.57
+          ],
+          [
+            6.937163,
+            43.663211,
+            296.51
+          ],
+          [
+            6.936945,
+            43.662967,
+            295.67
+          ],
+          [
+            6.936772,
+            43.662821,
+            295.46
+          ],
+          [
+            6.936461,
+            43.662638,
+            295.15
+          ],
+          [
+            6.936308,
+            43.662569,
+            295.15
+          ],
+          [
+            6.935923,
+            43.662461,
+            294.48
+          ],
+          [
+            6.934738,
+            43.662315,
+            294.67
+          ],
+          [
+            6.934602,
+            43.662291,
+            294.68
+          ],
+          [
+            6.934245,
+            43.662187,
+            294.95
+          ],
+          [
+            6.933787,
+            43.661994,
+            292.28
+          ],
+          [
+            6.932152,
+            43.661387,
+            285.02
+          ],
+          [
+            6.931476,
+            43.661114,
+            281.85
+          ],
+          [
+            6.931044,
+            43.660884,
+            280.36
+          ],
+          [
+            6.930772,
+            43.660676,
+            280.48
+          ],
+          [
+            6.930363,
+            43.66032,
+            272.9
+          ],
+          [
+            6.929022,
+            43.658993,
+            264.14
+          ],
+          [
+            6.928903,
+            43.658828,
+            264.13
+          ],
+          [
+            6.928627,
+            43.658311,
+            269.35
           ]
         ]
       }
