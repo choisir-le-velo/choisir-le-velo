@@ -1005,7 +1005,7 @@
       "type": "Feature",
       "properties": {
         "name": "",
-        "stroke": "#f57900",
+        "stroke": "#334cff",
         "stroke-width": 2,
         "stroke-opacity": 1,
         "comment": "Où est la fin de zone de rencontre ?? Vitesse inconnue sur cette section. Quelques passages rendus étroits pour maitriser la vitesse motorisée. Plus rien après le tunnel. Si 30km/h ok, OSM n’a pas l’info. “30 Rappel” ici : https://www.openstreetmap.org/#map=17/43.68628/6.97960. Fort dénivelé sur la fin (Chemin de l’Escure)."
